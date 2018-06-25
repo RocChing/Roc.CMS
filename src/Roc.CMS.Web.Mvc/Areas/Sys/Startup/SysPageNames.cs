@@ -35,7 +35,10 @@
         /// </summary>
         public static class Content
         {
-            public const string Contents = "Contents";
+            public const string Contents = "Content";
+            public const string Contents_Categorys = "Content.Categorys";
+            public const string Contents_Articles = "Content.Articles";
+            public const string Contents_Images = "Content.Images";
         }
     }
 }

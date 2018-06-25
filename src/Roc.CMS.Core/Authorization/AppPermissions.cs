@@ -10,7 +10,7 @@
 
         public const string Pages = "Pages";
 
-        public const string Pages_DemoUiComponents= "Pages.DemoUiComponents";
+        public const string Pages_DemoUiComponents = "Pages.DemoUiComponents";
 
         public const string Pages_Administration = "Pages.Administration";
 
@@ -68,9 +68,14 @@
         public const string Pages_Administration_Host_Settings = "Pages.Administration.Host.Settings";
         public const string Pages_Administration_Host_Dashboard = "Pages.Administration.Host.Dashboard";
 
-        //内容管理
+        #region 内容管理
         public const string Pages_Contents = "Pages.Contents";
 
+        public const string Pages_Contents_Category = "Pages.Contents.Category";
 
+        public const string Pages_Contents_Article = "Pages.Contents.Article";
+
+        public const string Pages_Contents_Image = "Pages.Contents.Image";
+        #endregion
     }
 }

@@ -31,7 +31,14 @@ namespace Roc.CMS.Authorization
             var pages = context.GetPermissionOrNull(AppPermissions.Pages) ?? context.CreatePermission(AppPermissions.Pages, L("Pages"));
             var demo = pages.CreateChildPermission(AppPermissions.Pages_DemoUiComponents, L("DemoUiComponents"));
 
+            #region 内容管理
             var contents = pages.CreateChildPermission(AppPermissions.Pages_Contents, L("Contents"));
+            var categorys = contents.CreateChildPermission(AppPermissions.Pages_Contents_Category, L("Contents_Category"));
+
+            var articles = contents.CreateChildPermission(AppPermissions.Pages_Contents_Article, L("Contents_Article"));
+
+            var images = contents.CreateChildPermission(AppPermissions.Pages_Contents_Image, L("Contents_Image"));
+            #endregion
 
             var administration = pages.CreateChildPermission(AppPermissions.Pages_Administration, L("Administration"));
 

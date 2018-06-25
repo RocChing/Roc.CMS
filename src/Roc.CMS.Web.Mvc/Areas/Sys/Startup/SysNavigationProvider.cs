@@ -120,12 +120,28 @@ namespace Roc.CMS.Web.Areas.Sys.Startup
                     )
                 )
                 .AddItem(new MenuItemDefinition(
-                        SysPageNames.Common.DemoUiComponents,
+                        SysPageNames.Content.Contents,
                         L("Contents"),
                         url: "Sys/DemoUiComponents",
-                        icon: "flaticon-shapes",
+                        icon: "flaticon-interface-8",
                         requiredPermissionName: AppPermissions.Pages_Contents
-                    ))
+                    ).AddItem(new MenuItemDefinition(SysPageNames.Content.Contents_Categorys,
+                        L("Contents_Category"),
+                        url: "Sys/DemoUiComponents",
+                        icon: "flaticon-map",
+                        requiredPermissionName: AppPermissions.Pages_Contents_Category)
+                    ).AddItem(new MenuItemDefinition(SysPageNames.Content.Contents_Articles,
+                        L("Contents_Article"),
+                        url: "Sys/DemoUiComponents",
+                        icon: "flaticon-folder-1",
+                        requiredPermissionName: AppPermissions.Pages_Contents_Article)
+                    ).AddItem(new MenuItemDefinition(SysPageNames.Content.Contents_Images,
+                        L("Contents_Image"),
+                        url: "Sys/DemoUiComponents",
+                        icon: "flaticon-tabs",
+                        requiredPermissionName: AppPermissions.Pages_Contents_Image)
+                    )
+                )
                 .AddItem(new MenuItemDefinition(
                         SysPageNames.Common.DemoUiComponents,
                         L("DemoUiComponents"),
