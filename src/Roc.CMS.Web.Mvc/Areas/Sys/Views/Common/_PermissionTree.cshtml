@@ -1,0 +1,6 @@
+﻿@using Roc.CMS.Web.Areas.Sys.Models.Common
+@model IPermissionsEditViewModel
+
+<div class="permission-tree">
+    @Html.Partial("~/Areas/Sys/Views/Common/_PermissionTreeItem.cshtml", new PermissionTreeItemModel(Model, null))
+</div>

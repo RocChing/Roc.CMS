@@ -9,7 +9,7 @@ using Microsoft.Extensions.Configuration;
 using Roc.CMS.Configuration;
 using Roc.CMS.EntityFrameworkCore;
 using Roc.CMS.MultiTenancy;
-using Roc.CMS.Web.Areas.AppAreaName.Startup;
+using Roc.CMS.Web.Areas.Sys.Startup;
 
 namespace Roc.CMS.Web.Startup
 {
@@ -30,7 +30,7 @@ namespace Roc.CMS.Web.Startup
         {
             Configuration.Modules.AbpWebCommon().MultiTenancy.DomainFormat = _appConfiguration["App:WebSiteRootAddress"] ?? "http://localhost:62114/";
             Configuration.Modules.AspNetZero().LicenseCode = _appConfiguration["AbpZeroLicenseCode"];
-            Configuration.Navigation.Providers.Add<AppAreaNameNavigationProvider>();
+            Configuration.Navigation.Providers.Add<SysNavigationProvider>();
         }
 
         public override void Initialize()

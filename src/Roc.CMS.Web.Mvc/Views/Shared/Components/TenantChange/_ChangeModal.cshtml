@@ -1,11 +1,11 @@
 ﻿@using Abp.MultiTenancy
-@using Roc.CMS.Web.Areas.AppAreaName.Models.Common.Modals
+@using Roc.CMS.Web.Areas.Sys.Models.Common.Modals
 @using Roc.CMS.Web.Views.Shared.Components.TenantChange
 @model ChangeModalViewModel
 @{
     Layout = null;
 }
-@Html.Partial("~/Areas/AppAreaName/Views/Common/Modals/_ModalHeader.cshtml", new ModalHeaderViewModel(L("ChangeTenant")))
+@Html.Partial("~/Areas/Sys/Views/Common/Modals/_ModalHeader.cshtml", new ModalHeaderViewModel(L("ChangeTenant")))
 
 <div class="modal-body">
     <form name="TenantChangeForm" role="form" novalidate class="form-validation">
@@ -17,4 +17,4 @@
     </form>
 </div>
 
-@Html.Partial("~/Areas/AppAreaName/Views/Common/Modals/_ModalFooterWithSaveAndCancel.cshtml")
+@Html.Partial("~/Areas/Sys/Views/Common/Modals/_ModalFooterWithSaveAndCancel.cshtml")

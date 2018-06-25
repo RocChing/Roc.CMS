@@ -27,7 +27,7 @@ namespace Roc.CMS.Web.Models.Payment
                 return "";
             }
                    
-            return "AppAreaName";
+            return "Sys";
         }
 
         public string GetFormPostController()

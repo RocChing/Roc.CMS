@@ -22,9 +22,9 @@
             function getUrl(userNotification) {
                 switch (userNotification.notification.notificationName) {
                     case 'App.NewUserRegistered':
-                        return '/AppAreaName/users?filterText=' + userNotification.notification.data.properties.emailAddress;
+                        return '/Sys/users?filterText=' + userNotification.notification.data.properties.emailAddress;
                     case 'App.NewTenantRegistered':
-                        return '/AppAreaName/tenants?filterText=' + userNotification.notification.data.properties.tenancyName;
+                        return '/Sys/tenants?filterText=' + userNotification.notification.data.properties.tenancyName;
                         //Add your custom notification names to navigate to a URL when user clicks to a notification.
                 }
 
@@ -96,8 +96,8 @@
 
             var openSettingsModal = function () {
                 new app.ModalManager({
-                    viewUrl: abp.appPath + 'AppAreaName/Notifications/SettingsModal',
-                    scriptUrl: abp.appPath + 'view-resources/Areas/AppAreaName/Views/Notifications/_SettingsModal.js',
+                    viewUrl: abp.appPath + 'Sys/Notifications/SettingsModal',
+                    scriptUrl: abp.appPath + 'view-resources/Areas/Sys/Views/Notifications/_SettingsModal.js',
                     modalClass: 'NotificationSettingsModal'
                 }).open();
             };

@@ -1,0 +1,42 @@
+﻿@using Abp.Extensions
+@using Roc.CMS.Web.Areas.Sys.Models.Common.Modals
+@using Roc.CMS.Web.Areas.Sys.Models.Languages
+@model EditTextModalViewModel
+@{
+    string headerText = Model.IsEdit ? L("EditText") : L("CreateText");
+}
+@Html.Partial("~/Areas/Sys/Views/Common/Modals/_ModalHeader.cshtml", new ModalHeaderViewModel(headerText))
+<div class="modal-body">
+    <form name="EditLanguageTextForm" role="form" novalidate class="form-validation">
+        <input type="hidden" name="SourceName" value="@Model.SourceName" />
+        <input type="hidden" name="LanguageName" value="@Model.TargetLanguage.Name" />
+
+        @if (Model.IsEdit)
+        {
+            <input type="hidden" name="Key" value="@Model.Key" />
+            <div class="form-group">
+                <label for="BaseLanguageDisplayName"><i class="@Model.BaseLanguage.Icon"></i> @Model.BaseLanguage.DisplayName </label>
+                <textarea id="BaseLanguageDisplayName" readonly class="form-control edited" rows="4">@Model.BaseText</textarea>
+            </div>
+            <div class="form-group">
+                <label for="TargetLanguageDisplayName"><i class="@Model.TargetLanguage.Icon"></i> @Model.TargetLanguage.DisplayName </label>
+                <textarea id="TargetLanguageDisplayName" name="Value" auto-focus class="form-control @(Model.TargetText.IsNullOrEmpty() ? "" : "edited")" rows="4">@Model.TargetText</textarea>
+            </div>
+        }
+        else
+        {
+            <div class="form-group">
+                <label for="BaseLanguageDisplayName"><i class="@Model.BaseLanguage.Icon"></i> @Model.BaseLanguage.DisplayName </label>
+            </div>
+            <div class="form-group">
+                <label for="Key">@L("CreateTextKey")</label>
+                <input id="Key" name="Key" class="form-control edited" rows="4"/>
+            </div>
+            <div class="form-group">
+                <label for="TargetLanguageDisplayName"><i class="@Model.TargetLanguage.Icon"></i> @Model.TargetLanguage.DisplayName </label>
+                <textarea id="TargetLanguageDisplayName" name="Value" auto-focus class="form-control edited" rows="4"></textarea>
+            </div>
+        }
+    </form>
+</div>
+@Html.Partial("~/Areas/Sys/Views/Common/Modals/_ModalFooterWithSaveAndCancel.cshtml")

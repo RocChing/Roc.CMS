@@ -1,6 +1,6 @@
 [
   {
-    "outputFileName": "wwwroot/view-resources/Areas/AppAreaName/Views/_Bundles/common-styles.css",
+    "outputFileName": "wwwroot/view-resources/Areas/Sys/Views/_Bundles/common-styles.css",
     "inputFiles": [
       "wwwroot/Common/Styles/**/*.css",
       "wwwroot/fonts/**/*.css",
@@ -11,7 +11,7 @@
     ]
   },
   {
-    "outputFileName": "wwwroot/view-resources/Areas/AppAreaName/Views/_Bundles/common-scripts.js",
+    "outputFileName": "wwwroot/view-resources/Areas/Sys/Views/_Bundles/common-scripts.js",
     "inputFiles": [
       "wwwroot/Common/Scripts/**/*.js",
       "!wwwroot/Common/Scripts/**/*min.js",
@@ -19,7 +19,7 @@
     ]
   },
   {
-    "outputFileName": "wwwroot/view-resources/Areas/AppAreaName/Views/_Bundles/scripts.bundle.js",
+    "outputFileName": "wwwroot/view-resources/Areas/Sys/Views/_Bundles/scripts.bundle.js",
     "inputFiles": [
       "wwwroot/metronic/src/js/framework/base/app.js",
       "wwwroot/metronic/src/js/framework/base/util.js",
@@ -48,13 +48,13 @@
     ]
   },
   {
-    "outputFileName": "wwwroot/view-resources/Areas/AppAreaName/Views/_Bundles/app-common-scripts.js",
+    "outputFileName": "wwwroot/view-resources/Areas/Sys/Views/_Bundles/app-common-scripts.js",
     "inputFiles": [
-      "wwwroot/view-resources/Areas/AppAreaName/Views/Common/Modals/_LookupModal.js"
+      "wwwroot/view-resources/Areas/Sys/Views/Common/Modals/_LookupModal.js"
     ]
   },
   {
-    "outputFileName": "wwwroot/view-resources/Areas/AppAreaName/Views/_Bundles/account-layout-libs.js",
+    "outputFileName": "wwwroot/view-resources/Areas/Sys/Views/_Bundles/account-layout-libs.js",
     "inputFiles": [
       "wwwroot/lib/json2/lib/JSON2/static/json2.js",
       "wwwroot/lib/jquery/dist/jquery.js",
@@ -79,13 +79,13 @@
     ]
   },
   {
-    "outputFileName": "wwwroot/view-resources/Areas/AppAreaName/Views/_Bundles/account-layout-libs.css",
+    "outputFileName": "wwwroot/view-resources/Areas/Sys/Views/_Bundles/account-layout-libs.css",
     "inputFiles": [
       "wwwroot/lib/famfamfam-flags/dist/sprite/famfamfam-flags.css"
     ]
   },
   {
-    "outputFileName": "wwwroot/view-resources/Areas/AppAreaName/Views/_Bundles/account-layout-libs-rtl.css",
+    "outputFileName": "wwwroot/view-resources/Areas/Sys/Views/_Bundles/account-layout-libs-rtl.css",
     "inputFiles": [
       "wwwroot/lib/simple-line-icons/css/simple-line-icons.css",
       "wwwroot/lib/font-awesome/css/font-awesome.css",
@@ -95,7 +95,7 @@
     ]
   },
   {
-    "outputFileName": "wwwroot/view-resources/Areas/AppAreaName/Views/_Bundles/app-layout-libs.css",
+    "outputFileName": "wwwroot/view-resources/Areas/Sys/Views/_Bundles/app-layout-libs.css",
     "inputFiles": [
       "wwwroot/lib/datatables.net-bs4/css/dataTables.bootstrap4.css",
       "wwwroot/lib/datatables.net-responsive-bs4/css/responsive.bootstrap4.css",
@@ -105,7 +105,7 @@
     ]
   },
   {
-    "outputFileName": "wwwroot/view-resources/Areas/AppAreaName/Views/_Bundles/vendors.bundle.css",
+    "outputFileName": "wwwroot/view-resources/Areas/Sys/Views/_Bundles/vendors.bundle.css",
     "inputFiles": [
       "wwwroot/lib/tether/dist/css/tether.css",
       "wwwroot/lib/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css",
@@ -136,7 +136,7 @@
     ]
   },
   {
-    "outputFileName": "wwwroot/view-resources/Areas/AppAreaName/Views/_Bundles/app-layout-libs.js",
+    "outputFileName": "wwwroot/view-resources/Areas/Sys/Views/_Bundles/app-layout-libs.js",
     "inputFiles": [
       "wwwroot/lib/json2/lib/JSON2/static/json2.js",
       "wwwroot/lib/jquery/dist/jquery.js",
@@ -201,11 +201,11 @@
     ]
   },
   {
-    "outputFileName": "wwwroot/view-resources/Areas/AppAreaName/Views/_Bundles/host-dashboard-libs.js",
+    "outputFileName": "wwwroot/view-resources/Areas/Sys/Views/_Bundles/host-dashboard-libs.js",
     "inputFiles": [
       "wwwroot/lib/morris.js/morris.js",
       "wwwroot/lib/raphael/raphael.js",
-      "wwwroot/view-resources/Areas/AppAreaName/Views/HostDashboard/Index.js",
+      "wwwroot/view-resources/Areas/Sys/Views/HostDashboard/Index.js",
       "wwwroot/lib/Flot/jquery.flot.js",
       "wwwroot/lib/Flot/jquery.flot.pie.js",
       "wwwroot/lib/Flot/jquery.flot.resize.js",
@@ -216,7 +216,7 @@
     ]
   },
   {
-    "outputFileName": "wwwroot/view-resources/Areas/AppAreaName/Views/_Bundles/tenant-dashboard-libs.js",
+    "outputFileName": "wwwroot/view-resources/Areas/Sys/Views/_Bundles/tenant-dashboard-libs.js",
     "inputFiles": [
       "wwwroot/lib/morris.js/morris.js",
       "wwwroot/lib/raphael/raphael.js",
@@ -225,311 +225,311 @@
       "wwwroot/lib/chartist/dist/chartist.js",
       "wwwroot/lib/waypoints/lib/jquery.waypoints.js",
       "wwwroot/lib/jquery.counterup/jquery.counterup.js",
-      "wwwroot/view-resources/Areas/AppAreaName/Views/Dashboard/Index.js"
+      "wwwroot/view-resources/Areas/Sys/Views/Dashboard/Index.js"
     ]
   },
   {
-    "outputFileName": "wwwroot/view-resources/Areas/AppAreaName/Views/_Bundles/tenant-index-libs.js",
+    "outputFileName": "wwwroot/view-resources/Areas/Sys/Views/_Bundles/tenant-index-libs.js",
     "inputFiles": [
-      "wwwroot/view-resources/Areas/AppAreaName/Views/Common/_FeaturesTree.js",
-      "wwwroot/view-resources/Areas/AppAreaName/Views/Tenants/_CreateModal.js",
-      "wwwroot/view-resources/Areas/AppAreaName/Views/Tenants/_EditModal.js",
-      "wwwroot/view-resources/Areas/AppAreaName/Views/Tenants/_FeaturesModal.js",
-      "wwwroot/view-resources/Areas/AppAreaName/Views/Tenants/Index.js"
+      "wwwroot/view-resources/Areas/Sys/Views/Common/_FeaturesTree.js",
+      "wwwroot/view-resources/Areas/Sys/Views/Tenants/_CreateModal.js",
+      "wwwroot/view-resources/Areas/Sys/Views/Tenants/_EditModal.js",
+      "wwwroot/view-resources/Areas/Sys/Views/Tenants/_FeaturesModal.js",
+      "wwwroot/view-resources/Areas/Sys/Views/Tenants/Index.js"
     ]
   },
   {
-    "outputFileName": "wwwroot/view-resources/Areas/AppAreaName/Views/_Bundles/demo-ui-components.css",
+    "outputFileName": "wwwroot/view-resources/Areas/Sys/Views/_Bundles/demo-ui-components.css",
     "inputFiles": [
-      "wwwroot/view-resources/Areas/AppAreaName/Views/DemoUiComponents/DateAndTimePickers/DemoDateAndTimePickers.css",
-      "wwwroot/view-resources/Areas/AppAreaName/Views/DemoUiComponents/FileUpload/FileUpload.css",
-      "wwwroot/view-resources/Areas/AppAreaName/Views/DemoUiComponents/Selections/Selections.css",
-      "wwwroot/view-resources/Areas/AppAreaName/Views/DemoUiComponents/InputMask/InputMask.css",
-      "wwwroot/view-resources/Areas/AppAreaName/Views/DemoUiComponents/Editor/Editor.css",
+      "wwwroot/view-resources/Areas/Sys/Views/DemoUiComponents/DateAndTimePickers/DemoDateAndTimePickers.css",
+      "wwwroot/view-resources/Areas/Sys/Views/DemoUiComponents/FileUpload/FileUpload.css",
+      "wwwroot/view-resources/Areas/Sys/Views/DemoUiComponents/Selections/Selections.css",
+      "wwwroot/view-resources/Areas/Sys/Views/DemoUiComponents/InputMask/InputMask.css",
+      "wwwroot/view-resources/Areas/Sys/Views/DemoUiComponents/Editor/Editor.css",
       "wwwroot/lib/summernote/dist/summernote.css"
     ]
   },
   {
-    "outputFileName": "wwwroot/view-resources/Areas/AppAreaName/Views/_Bundles/demo-ui-components.js",
+    "outputFileName": "wwwroot/view-resources/Areas/Sys/Views/_Bundles/demo-ui-components.js",
     "inputFiles": [
-      "wwwroot/view-resources/Areas/AppAreaName/Views/DemoUiComponents/DateAndTimePickers/DemoDateAndTimePickers.js",
-      "wwwroot/view-resources/Areas/AppAreaName/Views/DemoUiComponents/FileUpload/FileUpload.js",
-      "wwwroot/view-resources/Areas/AppAreaName/Views/DemoUiComponents/Selections/Selections.js",
-      "wwwroot/view-resources/Areas/AppAreaName/Views/DemoUiComponents/InputMask/InputMask.js",
-      "wwwroot/view-resources/Areas/AppAreaName/Views/DemoUiComponents/Editor/Editor.js",
+      "wwwroot/view-resources/Areas/Sys/Views/DemoUiComponents/DateAndTimePickers/DemoDateAndTimePickers.js",
+      "wwwroot/view-resources/Areas/Sys/Views/DemoUiComponents/FileUpload/FileUpload.js",
+      "wwwroot/view-resources/Areas/Sys/Views/DemoUiComponents/Selections/Selections.js",
+      "wwwroot/view-resources/Areas/Sys/Views/DemoUiComponents/InputMask/InputMask.js",
+      "wwwroot/view-resources/Areas/Sys/Views/DemoUiComponents/Editor/Editor.js",
       "wwwroot/lib/inputmask/dist/jquery.inputmask.bundle.js",
       "wwwroot/lib/summernote/dist/summernote.js"
     ]
   },
   {
-    "outputFileName": "wwwroot/view-resources/Areas/AppAreaName/Views/_Bundles/edition-list.js",
+    "outputFileName": "wwwroot/view-resources/Areas/Sys/Views/_Bundles/edition-list.js",
     "inputFiles": [
       "wwwroot/lib/inputmask/dist/jquery.inputmask.bundle.js",
-      "wwwroot/view-resources/Areas/AppAreaName/Views/Common/_FeaturesTree.js",
-      "wwwroot/view-resources/Areas/AppAreaName/Views/Editions/_CreateOrEditModal.js",
-      "wwwroot/view-resources/Areas/AppAreaName/Views/Editions/Index.js"
+      "wwwroot/view-resources/Areas/Sys/Views/Common/_FeaturesTree.js",
+      "wwwroot/view-resources/Areas/Sys/Views/Editions/_CreateOrEditModal.js",
+      "wwwroot/view-resources/Areas/Sys/Views/Editions/Index.js"
     ]
   },
   {
-    "outputFileName": "wwwroot/view-resources/Areas/AppAreaName/Views/_Bundles/edition-list.css",
+    "outputFileName": "wwwroot/view-resources/Areas/Sys/Views/_Bundles/edition-list.css",
     "inputFiles": [
-      "wwwroot/view-resources/Areas/AppAreaName/Views/Common/_FeaturesTree.css",
-      "wwwroot/view-resources/Areas/AppAreaName/Views/Editions/Index.css"
+      "wwwroot/view-resources/Areas/Sys/Views/Common/_FeaturesTree.css",
+      "wwwroot/view-resources/Areas/Sys/Views/Editions/Index.css"
     ]
   },
   {
-    "outputFileName": "wwwroot/view-resources/Areas/AppAreaName/Views/_Bundles/language-list.js",
+    "outputFileName": "wwwroot/view-resources/Areas/Sys/Views/_Bundles/language-list.js",
     "inputFiles": [
-      "wwwroot/view-resources/Areas/AppAreaName/Views/Languages/_CreateOrEditModal.js",
-      "wwwroot/view-resources/Areas/AppAreaName/Views/Languages/Index.js"
+      "wwwroot/view-resources/Areas/Sys/Views/Languages/_CreateOrEditModal.js",
+      "wwwroot/view-resources/Areas/Sys/Views/Languages/Index.js"
     ]
   },
   {
-    "outputFileName": "wwwroot/view-resources/Areas/AppAreaName/Views/_Bundles/language-texts.js",
+    "outputFileName": "wwwroot/view-resources/Areas/Sys/Views/_Bundles/language-texts.js",
     "inputFiles": [
-      "wwwroot/view-resources/Areas/AppAreaName/Views/Languages/_EditTextModal.js",
-      "wwwroot/view-resources/Areas/AppAreaName/Views/Languages/Texts.js"
+      "wwwroot/view-resources/Areas/Sys/Views/Languages/_EditTextModal.js",
+      "wwwroot/view-resources/Areas/Sys/Views/Languages/Texts.js"
     ]
   },
   {
-    "outputFileName": "wwwroot/view-resources/Areas/AppAreaName/Views/_Bundles/role-list.js",
+    "outputFileName": "wwwroot/view-resources/Areas/Sys/Views/_Bundles/role-list.js",
     "inputFiles": [
-      "wwwroot/view-resources/Areas/AppAreaName/Views/Common/_PermissionTree.js",
-      "wwwroot/view-resources/Areas/AppAreaName/Views/Roles/_CreateOrEditModal.js",
-      "wwwroot/view-resources/Areas/AppAreaName/Views/Roles/Index.js"
+      "wwwroot/view-resources/Areas/Sys/Views/Common/_PermissionTree.js",
+      "wwwroot/view-resources/Areas/Sys/Views/Roles/_CreateOrEditModal.js",
+      "wwwroot/view-resources/Areas/Sys/Views/Roles/Index.js"
     ]
   },
   {
-    "outputFileName": "wwwroot/view-resources/Areas/AppAreaName/Views/_Bundles/tenant-list.css",
+    "outputFileName": "wwwroot/view-resources/Areas/Sys/Views/_Bundles/tenant-list.css",
     "inputFiles": [
-      "wwwroot/view-resources/Areas/AppAreaName/Views/Common/_FeaturesTree.css",
-      "wwwroot/view-resources/Areas/AppAreaName/Views/Tenants/Index.css"
+      "wwwroot/view-resources/Areas/Sys/Views/Common/_FeaturesTree.css",
+      "wwwroot/view-resources/Areas/Sys/Views/Tenants/Index.css"
     ]
   },
   {
-    "outputFileName": "wwwroot/view-resources/Areas/AppAreaName/Views/_Bundles/user-list.js",
+    "outputFileName": "wwwroot/view-resources/Areas/Sys/Views/_Bundles/user-list.js",
     "inputFiles": [
-      "wwwroot/view-resources/Areas/AppAreaName/Views/Common/_PermissionTree.js",
-      "wwwroot/view-resources/Areas/AppAreaName/Views/Common/_OrganizationTree.js",
-      "wwwroot/view-resources/Areas/AppAreaName/Views/Users/_CreateOrEditModal.js",
-      "wwwroot/view-resources/Areas/AppAreaName/Views/Users/_PermissionsModal.js",
-      "wwwroot/view-resources/Areas/AppAreaName/Views/Users/Index.js"
+      "wwwroot/view-resources/Areas/Sys/Views/Common/_PermissionTree.js",
+      "wwwroot/view-resources/Areas/Sys/Views/Common/_OrganizationTree.js",
+      "wwwroot/view-resources/Areas/Sys/Views/Users/_CreateOrEditModal.js",
+      "wwwroot/view-resources/Areas/Sys/Views/Users/_PermissionsModal.js",
+      "wwwroot/view-resources/Areas/Sys/Views/Users/Index.js"
     ]
   },
   {
-    "outputFileName": "wwwroot/view-resources/Areas/AppAreaName/Views/AuditLogs/Index.min.js",
+    "outputFileName": "wwwroot/view-resources/Areas/Sys/Views/AuditLogs/Index.min.js",
     "inputFiles": [
-      "wwwroot/view-resources/Areas/AppAreaName/Views/AuditLogs/Index.js"
+      "wwwroot/view-resources/Areas/Sys/Views/AuditLogs/Index.js"
     ]
   },
   {
-    "outputFileName": "wwwroot/view-resources/Areas/AppAreaName/Views/AuditLogs/Index.min.css",
+    "outputFileName": "wwwroot/view-resources/Areas/Sys/Views/AuditLogs/Index.min.css",
     "inputFiles": [
-      "wwwroot/view-resources/Areas/AppAreaName/Views/AuditLogs/Index.css"
+      "wwwroot/view-resources/Areas/Sys/Views/AuditLogs/Index.css"
     ]
   },
   {
-    "outputFileName": "wwwroot/view-resources/Areas/AppAreaName/Views/Common/_FeaturesTree.min.js",
+    "outputFileName": "wwwroot/view-resources/Areas/Sys/Views/Common/_FeaturesTree.min.js",
     "inputFiles": [
-      "wwwroot/view-resources/Areas/AppAreaName/Views/Common/_FeaturesTree.js"
+      "wwwroot/view-resources/Areas/Sys/Views/Common/_FeaturesTree.js"
     ]
   },
   {
-    "outputFileName": "wwwroot/view-resources/Areas/AppAreaName/Views/Common/_PermissionTree.min.js",
+    "outputFileName": "wwwroot/view-resources/Areas/Sys/Views/Common/_PermissionTree.min.js",
     "inputFiles": [
-      "wwwroot/view-resources/Areas/AppAreaName/Views/Common/_PermissionTree.js"
+      "wwwroot/view-resources/Areas/Sys/Views/Common/_PermissionTree.js"
     ]
   },
   {
-    "outputFileName": "wwwroot/view-resources/Areas/AppAreaName/Views/Dashboard/Index.min.js",
+    "outputFileName": "wwwroot/view-resources/Areas/Sys/Views/Dashboard/Index.min.js",
     "inputFiles": [
-      "wwwroot/view-resources/Areas/AppAreaName/Views/Dashboard/Index.js"
+      "wwwroot/view-resources/Areas/Sys/Views/Dashboard/Index.js"
     ]
   },
   {
-    "outputFileName": "wwwroot/view-resources/Areas/AppAreaName/Views/Editions/Index.min.js",
+    "outputFileName": "wwwroot/view-resources/Areas/Sys/Views/Editions/Index.min.js",
     "inputFiles": [
-      "wwwroot/view-resources/Areas/AppAreaName/Views/Editions/Index.js"
+      "wwwroot/view-resources/Areas/Sys/Views/Editions/Index.js"
     ]
   },
   {
-    "outputFileName": "wwwroot/view-resources/Areas/AppAreaName/Views/Editions/_CreateOrEditModal.min.js",
+    "outputFileName": "wwwroot/view-resources/Areas/Sys/Views/Editions/_CreateOrEditModal.min.js",
     "inputFiles": [
-      "wwwroot/view-resources/Areas/AppAreaName/Views/Editions/_CreateOrEditModal.js"
+      "wwwroot/view-resources/Areas/Sys/Views/Editions/_CreateOrEditModal.js"
     ]
   },
   {
-    "outputFileName": "wwwroot/view-resources/Areas/AppAreaName/Views/HostSettings/Index.min.js",
+    "outputFileName": "wwwroot/view-resources/Areas/Sys/Views/HostSettings/Index.min.js",
     "inputFiles": [
-      "wwwroot/view-resources/Areas/AppAreaName/Views/HostSettings/Index.js"
+      "wwwroot/view-resources/Areas/Sys/Views/HostSettings/Index.js"
     ]
   },
   {
-    "outputFileName": "wwwroot/view-resources/Areas/AppAreaName/Views/Languages/_CreateOrEditModal.min.js",
+    "outputFileName": "wwwroot/view-resources/Areas/Sys/Views/Languages/_CreateOrEditModal.min.js",
     "inputFiles": [
-      "wwwroot/view-resources/Areas/AppAreaName/Views/Languages/_CreateOrEditModal.js"
+      "wwwroot/view-resources/Areas/Sys/Views/Languages/_CreateOrEditModal.js"
     ]
   },
   {
-    "outputFileName": "wwwroot/view-resources/Areas/AppAreaName/Views/Languages/_EditTextModal.min.js",
+    "outputFileName": "wwwroot/view-resources/Areas/Sys/Views/Languages/_EditTextModal.min.js",
     "inputFiles": [
-      "wwwroot/view-resources/Areas/AppAreaName/Views/Languages/_EditTextModal.js"
+      "wwwroot/view-resources/Areas/Sys/Views/Languages/_EditTextModal.js"
     ]
   },
   {
-    "outputFileName": "wwwroot/view-resources/Areas/AppAreaName/Views/Languages/Index.min.js",
+    "outputFileName": "wwwroot/view-resources/Areas/Sys/Views/Languages/Index.min.js",
     "inputFiles": [
-      "wwwroot/view-resources/Areas/AppAreaName/Views/Languages/Index.js"
+      "wwwroot/view-resources/Areas/Sys/Views/Languages/Index.js"
     ]
   },
   {
-    "outputFileName": "wwwroot/view-resources/Areas/AppAreaName/Views/Languages/Texts.min.js",
+    "outputFileName": "wwwroot/view-resources/Areas/Sys/Views/Languages/Texts.min.js",
     "inputFiles": [
-      "wwwroot/view-resources/Areas/AppAreaName/Views/Languages/Texts.js"
+      "wwwroot/view-resources/Areas/Sys/Views/Languages/Texts.js"
     ]
   },
   {
-    "outputFileName": "wwwroot/view-resources/Areas/AppAreaName/Views/Maintenance/Index.min.js",
+    "outputFileName": "wwwroot/view-resources/Areas/Sys/Views/Maintenance/Index.min.js",
     "inputFiles": [
-      "wwwroot/view-resources/Areas/AppAreaName/Views/Maintenance/Index.js"
+      "wwwroot/view-resources/Areas/Sys/Views/Maintenance/Index.js"
     ]
   },
   {
-    "outputFileName": "wwwroot/view-resources/Areas/AppAreaName/Views/Notifications/_SettingsModal.min.js",
+    "outputFileName": "wwwroot/view-resources/Areas/Sys/Views/Notifications/_SettingsModal.min.js",
     "inputFiles": [
-      "wwwroot/view-resources/Areas/AppAreaName/Views/Notifications/_SettingsModal.js"
+      "wwwroot/view-resources/Areas/Sys/Views/Notifications/_SettingsModal.js"
     ]
   },
   {
-    "outputFileName": "wwwroot/view-resources/Areas/AppAreaName/Views/Notifications/Index.min.js",
+    "outputFileName": "wwwroot/view-resources/Areas/Sys/Views/Notifications/Index.min.js",
     "inputFiles": [
-      "wwwroot/view-resources/Areas/AppAreaName/Views/Notifications/Index.js"
+      "wwwroot/view-resources/Areas/Sys/Views/Notifications/Index.js"
     ]
   },
   {
-    "outputFileName": "wwwroot/view-resources/Areas/AppAreaName/Views/OrganizationUnits/_CreateModal.min.js",
+    "outputFileName": "wwwroot/view-resources/Areas/Sys/Views/OrganizationUnits/_CreateModal.min.js",
     "inputFiles": [
-      "wwwroot/view-resources/Areas/AppAreaName/Views/OrganizationUnits/_CreateModal.js"
+      "wwwroot/view-resources/Areas/Sys/Views/OrganizationUnits/_CreateModal.js"
     ]
   },
   {
-    "outputFileName": "wwwroot/view-resources/Areas/AppAreaName/Views/OrganizationUnits/_EditModal.min.js",
+    "outputFileName": "wwwroot/view-resources/Areas/Sys/Views/OrganizationUnits/_EditModal.min.js",
     "inputFiles": [
-      "wwwroot/view-resources/Areas/AppAreaName/Views/OrganizationUnits/_EditModal.js"
+      "wwwroot/view-resources/Areas/Sys/Views/OrganizationUnits/_EditModal.js"
     ]
   },
   {
-    "outputFileName": "wwwroot/view-resources/Areas/AppAreaName/Views/OrganizationUnits/Index.min.js",
+    "outputFileName": "wwwroot/view-resources/Areas/Sys/Views/OrganizationUnits/Index.min.js",
     "inputFiles": [
-      "wwwroot/view-resources/Areas/AppAreaName/Views/OrganizationUnits/Index.js"
+      "wwwroot/view-resources/Areas/Sys/Views/OrganizationUnits/Index.js"
     ]
   },
   {
-    "outputFileName": "wwwroot/view-resources/Areas/AppAreaName/Views/Profile/_ChangePasswordModal.min.js",
+    "outputFileName": "wwwroot/view-resources/Areas/Sys/Views/Profile/_ChangePasswordModal.min.js",
     "inputFiles": [
-      "wwwroot/view-resources/Areas/AppAreaName/Views/Profile/_ChangePasswordModal.js"
+      "wwwroot/view-resources/Areas/Sys/Views/Profile/_ChangePasswordModal.js"
     ]
   },
   {
-    "outputFileName": "wwwroot/view-resources/Areas/AppAreaName/Views/Profile/_ChangePictureModal.min.js",
+    "outputFileName": "wwwroot/view-resources/Areas/Sys/Views/Profile/_ChangePictureModal.min.js",
     "inputFiles": [
-      "wwwroot/view-resources/Areas/AppAreaName/Views/Profile/_ChangePictureModal.js"
+      "wwwroot/view-resources/Areas/Sys/Views/Profile/_ChangePictureModal.js"
     ]
   },
   {
-    "outputFileName": "wwwroot/view-resources/Areas/AppAreaName/Views/Profile/_LinkAccountModal.min.js",
+    "outputFileName": "wwwroot/view-resources/Areas/Sys/Views/Profile/_LinkAccountModal.min.js",
     "inputFiles": [
-      "wwwroot/view-resources/Areas/AppAreaName/Views/Profile/_LinkAccountModal.js"
+      "wwwroot/view-resources/Areas/Sys/Views/Profile/_LinkAccountModal.js"
     ]
   },
   {
-    "outputFileName": "wwwroot/view-resources/Areas/AppAreaName/Views/Profile/_LinkedAccountsModal.min.js",
+    "outputFileName": "wwwroot/view-resources/Areas/Sys/Views/Profile/_LinkedAccountsModal.min.js",
     "inputFiles": [
-      "wwwroot/view-resources/Areas/AppAreaName/Views/Profile/_LinkedAccountsModal.js"
+      "wwwroot/view-resources/Areas/Sys/Views/Profile/_LinkedAccountsModal.js"
     ]
   },
   {
-    "outputFileName": "wwwroot/view-resources/Areas/AppAreaName/Views/Profile/_MySettingsModal.min.js",
+    "outputFileName": "wwwroot/view-resources/Areas/Sys/Views/Profile/_MySettingsModal.min.js",
     "inputFiles": [
-      "wwwroot/view-resources/Areas/AppAreaName/Views/Profile/_MySettingsModal.js"
+      "wwwroot/view-resources/Areas/Sys/Views/Profile/_MySettingsModal.js"
     ]
   },
   {
-    "outputFileName": "wwwroot/view-resources/Areas/AppAreaName/Views/Roles/_CreateOrEditModal.min.js",
+    "outputFileName": "wwwroot/view-resources/Areas/Sys/Views/Roles/_CreateOrEditModal.min.js",
     "inputFiles": [
-      "wwwroot/view-resources/Areas/AppAreaName/Views/Roles/_CreateOrEditModal.js"
+      "wwwroot/view-resources/Areas/Sys/Views/Roles/_CreateOrEditModal.js"
     ]
   },
   {
-    "outputFileName": "wwwroot/view-resources/Areas/AppAreaName/Views/Roles/Index.min.js",
+    "outputFileName": "wwwroot/view-resources/Areas/Sys/Views/Roles/Index.min.js",
     "inputFiles": [
-      "wwwroot/view-resources/Areas/AppAreaName/Views/Roles/Index.js"
+      "wwwroot/view-resources/Areas/Sys/Views/Roles/Index.js"
     ]
   },
   {
-    "outputFileName": "wwwroot/view-resources/Areas/AppAreaName/Views/Settings/Index.min.js",
+    "outputFileName": "wwwroot/view-resources/Areas/Sys/Views/Settings/Index.min.js",
     "inputFiles": [
-      "wwwroot/view-resources/Areas/AppAreaName/Views/Settings/Index.js"
+      "wwwroot/view-resources/Areas/Sys/Views/Settings/Index.js"
     ]
   },
   {
-    "outputFileName": "wwwroot/view-resources/Areas/AppAreaName/Views/Tenants/_CreateModal.min.js",
+    "outputFileName": "wwwroot/view-resources/Areas/Sys/Views/Tenants/_CreateModal.min.js",
     "inputFiles": [
-      "wwwroot/view-resources/Areas/AppAreaName/Views/Tenants/_CreateModal.js"
+      "wwwroot/view-resources/Areas/Sys/Views/Tenants/_CreateModal.js"
     ]
   },
   {
-    "outputFileName": "wwwroot/view-resources/Areas/AppAreaName/Views/Tenants/_EditModal.min.js",
+    "outputFileName": "wwwroot/view-resources/Areas/Sys/Views/Tenants/_EditModal.min.js",
     "inputFiles": [
-      "wwwroot/view-resources/Areas/AppAreaName/Views/Tenants/_EditModal.js"
+      "wwwroot/view-resources/Areas/Sys/Views/Tenants/_EditModal.js"
     ]
   },
   {
-    "outputFileName": "wwwroot/view-resources/Areas/AppAreaName/Views/Tenants/_FeaturesModal.min.js",
+    "outputFileName": "wwwroot/view-resources/Areas/Sys/Views/Tenants/_FeaturesModal.min.js",
     "inputFiles": [
-      "wwwroot/view-resources/Areas/AppAreaName/Views/Tenants/_FeaturesModal.js"
+      "wwwroot/view-resources/Areas/Sys/Views/Tenants/_FeaturesModal.js"
     ]
   },
   {
-    "outputFileName": "wwwroot/view-resources/Areas/AppAreaName/Views/Tenants/Index.min.js",
+    "outputFileName": "wwwroot/view-resources/Areas/Sys/Views/Tenants/Index.min.js",
     "inputFiles": [
-      "wwwroot/view-resources/Areas/AppAreaName/Views/Tenants/Index.js"
+      "wwwroot/view-resources/Areas/Sys/Views/Tenants/Index.js"
     ]
   },
   {
-    "outputFileName": "wwwroot/view-resources/Areas/AppAreaName/Views/Users/_CreateOrEditModal.min.js",
+    "outputFileName": "wwwroot/view-resources/Areas/Sys/Views/Users/_CreateOrEditModal.min.js",
     "inputFiles": [
-      "wwwroot/view-resources/Areas/AppAreaName/Views/Users/_CreateOrEditModal.js"
+      "wwwroot/view-resources/Areas/Sys/Views/Users/_CreateOrEditModal.js"
     ]
   },
   {
-    "outputFileName": "wwwroot/view-resources/Areas/AppAreaName/Views/Users/_LoginAttemptsModal.min.js",
+    "outputFileName": "wwwroot/view-resources/Areas/Sys/Views/Users/_LoginAttemptsModal.min.js",
     "inputFiles": [
-      "wwwroot/view-resources/Areas/AppAreaName/Views/Users/_LoginAttemptsModal.js"
+      "wwwroot/view-resources/Areas/Sys/Views/Users/_LoginAttemptsModal.js"
     ]
   },
   {
-    "outputFileName": "wwwroot/view-resources/Areas/AppAreaName/Views/Users/_PermissionsModal.min.js",
+    "outputFileName": "wwwroot/view-resources/Areas/Sys/Views/Users/_PermissionsModal.min.js",
     "inputFiles": [
-      "wwwroot/view-resources/Areas/AppAreaName/Views/Users/_PermissionsModal.js"
+      "wwwroot/view-resources/Areas/Sys/Views/Users/_PermissionsModal.js"
     ]
   },
   {
-    "outputFileName": "wwwroot/view-resources/Areas/AppAreaName/Views/Users/Index.min.js",
+    "outputFileName": "wwwroot/view-resources/Areas/Sys/Views/Users/Index.min.js",
     "inputFiles": [
-      "wwwroot/view-resources/Areas/AppAreaName/Views/Users/Index.js"
+      "wwwroot/view-resources/Areas/Sys/Views/Users/Index.js"
     ]
   },
   {
-    "outputFileName": "wwwroot/view-resources/Areas/AppAreaName/Views/Layout/_ChatBar.min.js",
+    "outputFileName": "wwwroot/view-resources/Areas/Sys/Views/Layout/_ChatBar.min.js",
     "inputFiles": [
-      "wwwroot/view-resources/Areas/AppAreaName/Views/Layout/_ChatBar.js"
+      "wwwroot/view-resources/Areas/Sys/Views/Layout/_ChatBar.js"
     ]
   },
   {
-    "outputFileName": "wwwroot/view-resources/Areas/AppAreaName/Views/Layout/_Header.min.js",
+    "outputFileName": "wwwroot/view-resources/Areas/Sys/Views/Layout/_Header.min.js",
     "inputFiles": [
-      "wwwroot/view-resources/Areas/AppAreaName/Views/Layout/_Header.js"
+      "wwwroot/view-resources/Areas/Sys/Views/Layout/_Header.js"
     ]
   },
   {
@@ -593,9 +593,9 @@
     ]
   },
   {
-    "outputFileName": "wwwroot/view-resources/Areas/AppAreaName/Views/HostDashboard/Index.min.js",
+    "outputFileName": "wwwroot/view-resources/Areas/Sys/Views/HostDashboard/Index.min.js",
     "inputFiles": [
-      "wwwroot/view-resources/Areas/AppAreaName/Views/HostDashboard/Index.js"
+      "wwwroot/view-resources/Areas/Sys/Views/HostDashboard/Index.js"
     ]
   },
   {
@@ -605,9 +605,9 @@
     ]
   },
   {
-    "outputFileName": "wwwroot/view-resources/Areas/AppAreaName/Views/UiCustomization/Index.min.js",
+    "outputFileName": "wwwroot/view-resources/Areas/Sys/Views/UiCustomization/Index.min.js",
     "inputFiles": [
-      "wwwroot/view-resources/Areas/AppAreaName/Views/UiCustomization/Index.js"
+      "wwwroot/view-resources/Areas/Sys/Views/UiCustomization/Index.js"
     ]
   },
   {
@@ -623,9 +623,9 @@
     ]
   },
   {
-    "outputFileName": "wwwroot/view-resources/Areas/AppAreaName/Views/Dashboard/Index.min.css",
+    "outputFileName": "wwwroot/view-resources/Areas/Sys/Views/Dashboard/Index.min.css",
     "inputFiles": [
-      "wwwroot/view-resources/Areas/AppAreaName/Views/Dashboard/Index.css"
+      "wwwroot/view-resources/Areas/Sys/Views/Dashboard/Index.css"
     ]
   },
   {
@@ -791,15 +791,15 @@
     ]
   },
   {
-    "outputFileName": "wwwroot/view-resources/Areas/AppAreaName/Views/HostDashboard/Index.min.css",
+    "outputFileName": "wwwroot/view-resources/Areas/Sys/Views/HostDashboard/Index.min.css",
     "inputFiles": [
-      "wwwroot/view-resources/Areas/AppAreaName/Views/HostDashboard/Index.css"
+      "wwwroot/view-resources/Areas/Sys/Views/HostDashboard/Index.css"
     ]
   },
   {
-    "outputFileName": "wwwroot/view-resources/Areas/AppAreaName/Views/Layout/_Layout.min.css",
+    "outputFileName": "wwwroot/view-resources/Areas/Sys/Views/Layout/_Layout.min.css",
     "inputFiles": [
-      "wwwroot/view-resources/Areas/AppAreaName/Views/Layout/_Layout.css"
+      "wwwroot/view-resources/Areas/Sys/Views/Layout/_Layout.css"
     ]
   },
   {
@@ -845,87 +845,87 @@
     ]
   },
   {
-    "outputFileName": "wwwroot/view-resources/Areas/AppAreaName/Views/Common/Modals/Empty/_Empty.min.js",
+    "outputFileName": "wwwroot/view-resources/Areas/Sys/Views/Common/Modals/Empty/_Empty.min.js",
     "inputFiles": [
-      "wwwroot/view-resources/Areas/AppAreaName/Views/Common/Modals/Empty/_Empty.js"
+      "wwwroot/view-resources/Areas/Sys/Views/Common/Modals/Empty/_Empty.js"
     ]
   },
   {
-    "outputFileName": "wwwroot/view-resources/Areas/AppAreaName/Views/Common/Modals/_LookupModal.min.js",
+    "outputFileName": "wwwroot/view-resources/Areas/Sys/Views/Common/Modals/_LookupModal.min.js",
     "inputFiles": [
-      "wwwroot/view-resources/Areas/AppAreaName/Views/Common/Modals/_LookupModal.js"
+      "wwwroot/view-resources/Areas/Sys/Views/Common/Modals/_LookupModal.js"
     ]
   },
   {
-    "outputFileName": "wwwroot/view-resources/Areas/AppAreaName/Views/Common/_FeaturesTree.min.css",
+    "outputFileName": "wwwroot/view-resources/Areas/Sys/Views/Common/_FeaturesTree.min.css",
     "inputFiles": [
-      "wwwroot/view-resources/Areas/AppAreaName/Views/Common/_FeaturesTree.css"
+      "wwwroot/view-resources/Areas/Sys/Views/Common/_FeaturesTree.css"
     ]
   },
   {
-    "outputFileName": "wwwroot/view-resources/Areas/AppAreaName/Views/Common/_OrganizationTree.min.js",
+    "outputFileName": "wwwroot/view-resources/Areas/Sys/Views/Common/_OrganizationTree.min.js",
     "inputFiles": [
-      "wwwroot/view-resources/Areas/AppAreaName/Views/Common/_OrganizationTree.js"
+      "wwwroot/view-resources/Areas/Sys/Views/Common/_OrganizationTree.js"
     ]
   },
   {
-    "outputFileName": "wwwroot/view-resources/Areas/AppAreaName/Views/Languages/index.min.css",
+    "outputFileName": "wwwroot/view-resources/Areas/Sys/Views/Languages/index.min.css",
     "inputFiles": [
-      "wwwroot/view-resources/Areas/AppAreaName/Views/Languages/index.css"
+      "wwwroot/view-resources/Areas/Sys/Views/Languages/index.css"
     ]
   },
   {
-    "outputFileName": "wwwroot/view-resources/Areas/AppAreaName/Views/Languages/Texts.min.css",
+    "outputFileName": "wwwroot/view-resources/Areas/Sys/Views/Languages/Texts.min.css",
     "inputFiles": [
-      "wwwroot/view-resources/Areas/AppAreaName/Views/Languages/Texts.css"
+      "wwwroot/view-resources/Areas/Sys/Views/Languages/Texts.css"
     ]
   },
   {
-    "outputFileName": "wwwroot/view-resources/Areas/AppAreaName/Views/Layout/_ChatBar.min.css",
+    "outputFileName": "wwwroot/view-resources/Areas/Sys/Views/Layout/_ChatBar.min.css",
     "inputFiles": [
-      "wwwroot/view-resources/Areas/AppAreaName/Views/Layout/_ChatBar.css"
+      "wwwroot/view-resources/Areas/Sys/Views/Layout/_ChatBar.css"
     ]
   },
   {
-    "outputFileName": "wwwroot/view-resources/Areas/AppAreaName/Views/Maintenance/Index.min.css",
+    "outputFileName": "wwwroot/view-resources/Areas/Sys/Views/Maintenance/Index.min.css",
     "inputFiles": [
-      "wwwroot/view-resources/Areas/AppAreaName/Views/Maintenance/Index.css"
+      "wwwroot/view-resources/Areas/Sys/Views/Maintenance/Index.css"
     ]
   },
   {
-    "outputFileName": "wwwroot/view-resources/Areas/AppAreaName/Views/Notifications/Index.min.css",
+    "outputFileName": "wwwroot/view-resources/Areas/Sys/Views/Notifications/Index.min.css",
     "inputFiles": [
-      "wwwroot/view-resources/Areas/AppAreaName/Views/Notifications/Index.css"
+      "wwwroot/view-resources/Areas/Sys/Views/Notifications/Index.css"
     ]
   },
   {
-    "outputFileName": "wwwroot/view-resources/Areas/AppAreaName/Views/OrganizationUnits/_AddMemberModal.min.js",
+    "outputFileName": "wwwroot/view-resources/Areas/Sys/Views/OrganizationUnits/_AddMemberModal.min.js",
     "inputFiles": [
-      "wwwroot/view-resources/Areas/AppAreaName/Views/OrganizationUnits/_AddMemberModal.js"
+      "wwwroot/view-resources/Areas/Sys/Views/OrganizationUnits/_AddMemberModal.js"
     ]
   },
   {
-    "outputFileName": "wwwroot/view-resources/Areas/AppAreaName/Views/OrganizationUnits/Index.min.css",
+    "outputFileName": "wwwroot/view-resources/Areas/Sys/Views/OrganizationUnits/Index.min.css",
     "inputFiles": [
-      "wwwroot/view-resources/Areas/AppAreaName/Views/OrganizationUnits/Index.css"
+      "wwwroot/view-resources/Areas/Sys/Views/OrganizationUnits/Index.css"
     ]
   },
   {
-    "outputFileName": "wwwroot/view-resources/Areas/AppAreaName/Views/Profile/_SmsVerificationModal.min.js",
+    "outputFileName": "wwwroot/view-resources/Areas/Sys/Views/Profile/_SmsVerificationModal.min.js",
     "inputFiles": [
-      "wwwroot/view-resources/Areas/AppAreaName/Views/Profile/_SmsVerificationModal.js"
+      "wwwroot/view-resources/Areas/Sys/Views/Profile/_SmsVerificationModal.js"
     ]
   },
   {
-    "outputFileName": "wwwroot/view-resources/Areas/AppAreaName/Views/Roles/index.min.css",
+    "outputFileName": "wwwroot/view-resources/Areas/Sys/Views/Roles/index.min.css",
     "inputFiles": [
-      "wwwroot/view-resources/Areas/AppAreaName/Views/Roles/index.css"
+      "wwwroot/view-resources/Areas/Sys/Views/Roles/index.css"
     ]
   },
   {
-    "outputFileName": "wwwroot/view-resources/Areas/AppAreaName/Views/SubscriptionManagement/Index.min.js",
+    "outputFileName": "wwwroot/view-resources/Areas/Sys/Views/SubscriptionManagement/Index.min.js",
     "inputFiles": [
-      "wwwroot/view-resources/Areas/AppAreaName/Views/SubscriptionManagement/Index.js"
+      "wwwroot/view-resources/Areas/Sys/Views/SubscriptionManagement/Index.js"
     ]
   },
   {

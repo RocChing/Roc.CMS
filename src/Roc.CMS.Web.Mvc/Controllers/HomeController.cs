@@ -26,7 +26,7 @@ namespace Roc.CMS.Web.Controllers
             }
 
             return AbpSession.UserId.HasValue ? 
-                RedirectToAction("Index", "Home", new { area = "AppAreaName" }) : 
+                RedirectToAction("Index", "Home", new { area = "Sys" }) : 
                 RedirectToAction("Login", "Account");
         }
     }

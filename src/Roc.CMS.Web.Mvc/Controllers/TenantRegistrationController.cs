@@ -123,7 +123,7 @@ namespace Roc.CMS.Web.Controllers
 
                         SetTenantIdCookie(result.TenantId);
 
-                        return Redirect(Url.Action("Index", "Home", new { area = "AppAreaName" }));
+                        return Redirect(Url.Action("Index", "Home", new { area = "Sys" }));
                     }
 
                     Logger.Warn("New registered user could not be login. This should not be normally. login result: " + loginResult.Result);

@@ -1,0 +1,5 @@
+﻿@using Roc.CMS.Web.Areas.Sys.Models.Common
+@model IFeatureEditViewModel
+<div class="feature-tree">
+    @Html.Partial("~/Areas/Sys/Views/Common/_FeaturesTreeItem.cshtml", new FeatureTreeItemModel(Model, null))
+</div>

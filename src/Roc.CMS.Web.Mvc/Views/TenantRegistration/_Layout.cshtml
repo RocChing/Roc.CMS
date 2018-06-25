@@ -33,11 +33,11 @@
 
     <link rel="shortcut icon" href="~/favicon.ico" />
 
-    <link rel="stylesheet" abp-href="/view-resources/Areas/AppAreaName/Views/_Bundles/vendors.bundle.css" asp-append-version="true" />
+    <link rel="stylesheet" abp-href="/view-resources/Areas/Sys/Views/_Bundles/vendors.bundle.css" asp-append-version="true" />
     <link rel="stylesheet" href="/metronic/dist/html/@theme/assets/demo/@theme/base/style.bundle@(CultureHelper.IsRtl ? "-rtl":"").css" asp-append-version="true" />
-    <link rel="stylesheet" abp-href="/view-resources/Areas/AppAreaName/Views/_Bundles/account-layout-libs.css" asp-append-version="true" />
+    <link rel="stylesheet" abp-href="/view-resources/Areas/Sys/Views/_Bundles/account-layout-libs.css" asp-append-version="true" />
 
-    <link rel="stylesheet" abp-href="/view-resources/Areas/AppAreaName/Views/_Bundles/common-styles.css" asp-append-version="true" />
+    <link rel="stylesheet" abp-href="/view-resources/Areas/Sys/Views/_Bundles/common-styles.css" asp-append-version="true" />
     <link rel="stylesheet" abp-href="/view-resources/Views/TenantRegistration/_Layout.css" asp-append-version="true" />
 
     @if (CultureHelper.IsRtl)
@@ -74,13 +74,13 @@
     </div>
 
     <!--begin::Base Scripts -->
-    <script abp-src="/view-resources/Areas/AppAreaName/Views/_Bundles/account-layout-libs.js" asp-append-version="true"></script>    
+    <script abp-src="/view-resources/Areas/Sys/Views/_Bundles/account-layout-libs.js" asp-append-version="true"></script>    
     
     <!-- Dynamic scripts of ABP system (They are created on runtime and can not be bundled) -->
     <script src="~/AbpServiceProxies/GetAll?v=@(AppTimes.StartupTime.Ticks)" type="text/javascript"></script>
     <script src="~/AbpScripts/GetScripts?v=@(AppTimes.StartupTime.Ticks)" type="text/javascript"></script>
     
-    <script abp-src="/view-resources/Areas/AppAreaName/Views/_Bundles/common-scripts.js" asp-append-version="true"></script>
+    <script abp-src="/view-resources/Areas/Sys/Views/_Bundles/common-scripts.js" asp-append-version="true"></script>
 
     @WebResourceManager.RenderScripts();
 

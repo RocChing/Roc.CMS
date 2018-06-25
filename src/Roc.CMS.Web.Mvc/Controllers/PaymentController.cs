@@ -128,7 +128,7 @@ namespace Roc.CMS.Web.Controllers
             if (editionPaymentType == EditionPaymentType.Upgrade && await UpgradeIsFree(upgradeEditionId))
             {
                 await _subscriptionAppService.UpgradeTenantToEquivalentEdition(upgradeEditionId);
-                return RedirectToAction("Index", "SubscriptionManagement", new { area = "AppAreaName" });
+                return RedirectToAction("Index", "SubscriptionManagement", new { area = "Sys" });
             }
 
             var model = new PaymentViewModel

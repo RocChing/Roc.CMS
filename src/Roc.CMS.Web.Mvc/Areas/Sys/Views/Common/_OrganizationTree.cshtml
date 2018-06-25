@@ -1,0 +1,9 @@
+﻿@using Roc.CMS.Web.Areas.Sys.Models.Common
+@model IOrganizationUnitsEditViewModel
+
+<div class="form-group">
+    <input id="OrganizationTreeFilter" type="text" class="form-control" placeholder="@L("SearchWithThreeDot")">
+</div>
+<div class="organization-tree">
+    @Html.Partial("~/Areas/Sys/Views/Common/_OrganizationUnitTreeItem.cshtml", new OrganizationUnitTreeItemModel(Model, null))
+</div>

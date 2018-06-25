@@ -866,12 +866,12 @@ namespace Roc.CMS.Web.Controllers
 
         public ActionResult RedirectToAppHome()
         {
-            return RedirectToAction("Index", "Home", new { area = "AppAreaName" });
+            return RedirectToAction("Index", "Home", new { area = "Sys" });
         }
 
         public string GetAppHomeUrl()
         {
-            return Url.Action("Index", "Home", new { area = "AppAreaName" });
+            return Url.Action("Index", "Home", new { area = "Sys" });
         }
 
         private string NormalizeReturnUrl(string returnUrl, Func<string> defaultValueBuilder = null)
