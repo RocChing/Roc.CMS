@@ -122,7 +122,6 @@ namespace Roc.CMS.Web.Areas.Sys.Startup
                 .AddItem(new MenuItemDefinition(
                         SysPageNames.Content.Contents,
                         L("Contents"),
-                        url: "Sys/DemoUiComponents",
                         icon: "flaticon-interface-8",
                         requiredPermissionName: AppPermissions.Pages_Contents
                     ).AddItem(new MenuItemDefinition(SysPageNames.Content.Contents_Categorys,
