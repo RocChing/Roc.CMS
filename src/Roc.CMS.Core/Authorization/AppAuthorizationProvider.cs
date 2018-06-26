@@ -34,6 +34,10 @@ namespace Roc.CMS.Authorization
             #region 内容管理
             var contents = pages.CreateChildPermission(AppPermissions.Pages_Contents, L("Contents"));
             var categorys = contents.CreateChildPermission(AppPermissions.Pages_Contents_Category, L("Contents_Category"));
+            categorys.CreateChildPermission(AppPermissions.Pages_Contents_Category_Query,L("Contents_Category_Query"));
+            categorys.CreateChildPermission(AppPermissions.Pages_Contents_Category_Create, L("Contents_Category_Create"));
+            categorys.CreateChildPermission(AppPermissions.Pages_Contents_Category_Edit, L("Contents_Category_Edit"));
+            categorys.CreateChildPermission(AppPermissions.Pages_Contents_Category_Delete, L("Contents_Category_Delete"));
 
             var articles = contents.CreateChildPermission(AppPermissions.Pages_Contents_Article, L("Contents_Article"));
 

@@ -6,6 +6,11 @@
     <TargetFrameworks>netstandard2.0</TargetFrameworks>
     <RootNamespace>Roc.CMS</RootNamespace>
   </PropertyGroup>
+ 
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard2.0|AnyCPU'">
+    <NoWarn>1701;1702;1587;1573;1572;1591</NoWarn>
+    <DocumentationFile>bin\Debug\netstandard2.0\Roc.CMS.Core.Shared.xml</DocumentationFile>
+  </PropertyGroup>
 
   <ItemGroup Condition=" '$(TargetFramework)' == 'net461' ">
     <Reference Include="System.ComponentModel.DataAnnotations" />

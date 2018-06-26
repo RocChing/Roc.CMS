@@ -14,6 +14,13 @@
     <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
     <RootNamespace>Roc.CMS</RootNamespace>
   </PropertyGroup>
+ 
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net461|AnyCPU'">
+    <DocumentationFile></DocumentationFile>
+    <NoWarn>1701;1702;1587;1573;1572;1591</NoWarn>
+    <DefineConstants>TRACE;DEBUG;NETSTANDARD2_0;NETFRAMEWORK</DefineConstants>
+    <OutputPath>\bin\Debug\netcoreapp2.1\</OutputPath>
+  </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="EPPlus.Core" Version="1.5.4" />

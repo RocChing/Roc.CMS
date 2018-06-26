@@ -10,6 +10,7 @@ using Roc.CMS.MultiTenancy;
 using Roc.CMS.MultiTenancy.Accounting;
 using Roc.CMS.MultiTenancy.Payments;
 using Roc.CMS.Storage;
+using Roc.CMS.Content;
 
 namespace Roc.CMS.EntityFrameworkCore
 {
@@ -31,6 +32,8 @@ namespace Roc.CMS.EntityFrameworkCore
 
         public virtual DbSet<PersistedGrantEntity> PersistedGrants { get; set; }
 
+        public virtual DbSet<Category> Categorys { get; set; }
+
         public AbpZeroTemplateDbContext(DbContextOptions<AbpZeroTemplateDbContext> options)
             : base(options)
         {
@@ -40,6 +43,12 @@ namespace Roc.CMS.EntityFrameworkCore
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<Category>(m =>
+            {
+                m.HasIndex(e => new { e.TenantId, e.Type, e.Target });
+                m.HasIndex(e => new { e.TenantId, e.ParentId });
+            });
 
             modelBuilder.Entity<BinaryObject>(b =>
             {

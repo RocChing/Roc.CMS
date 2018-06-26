@@ -56,7 +56,7 @@ namespace Roc.CMS.Web.Startup
     public class Startup
     {
         private const string DefaultCorsPolicyName = "localhost";
-
+        private const string _apiVersion = "V1.2";
         private readonly IConfigurationRoot _appConfiguration;
         private readonly IHostingEnvironment _hostingEnvironment;
 
@@ -108,8 +108,14 @@ namespace Roc.CMS.Web.Startup
             //Swagger - Enable this line and the related lines in Configure method to enable swagger UI
             services.AddSwaggerGen(options =>
             {
-                options.SwaggerDoc("v1", new Info { Title = "AbpZeroTemplate API", Version = "v1" });
+                options.SwaggerDoc(_apiVersion, new Info { Title = "AbpZeroTemplate API", Version = _apiVersion });
                 options.DocInclusionPredicate((docName, description) => true);
+
+                string baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
+                //options.IncludeXmlComments(Path.Combine(baseDirectory, "Roc.CMS.Core.xml"));//Roc.CMS.Application.Shared.xml
+                options.IncludeXmlComments(Path.Combine(baseDirectory, "Roc.CMS.Core.Shared.xml"));
+                //options.IncludeXmlComments(Path.Combine(baseDirectory, "Roc.CMS.Application.xml"));
+                options.IncludeXmlComments(Path.Combine(baseDirectory, "Roc.CMS.Application.Shared.xml"));
 
                 //Note: This is just for showing Authorize button on the UI. 
                 //Authorize button's behaviour is handled in wwwroot/swagger/ui/index.html
@@ -200,7 +206,7 @@ namespace Roc.CMS.Web.Startup
 
             app.UseSwaggerUI(options =>
             {
-                options.SwaggerEndpoint("/swagger/v1/swagger.json", "AbpZeroTemplate API V1");
+                options.SwaggerEndpoint(string.Format("/swagger/{0}/swagger.json", _apiVersion), "AbpZeroTemplate API " + _apiVersion);
                 options.IndexStream = () => Assembly.GetExecutingAssembly()
                     .GetManifestResourceStream("Roc.CMS.Web.wwwroot.swagger.ui.index.html");
             }); //URL: /swagger

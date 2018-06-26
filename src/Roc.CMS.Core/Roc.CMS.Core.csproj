@@ -15,6 +15,13 @@
         <UserSecretsId>Roc.CMS-894FDFC1-6482-4A56-926A-3C46C9FE0329</UserSecretsId>
         <RootNamespace>Roc.CMS</RootNamespace>
     </PropertyGroup>
+ 
+    <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net461|AnyCPU'">
+      <DocumentationFile></DocumentationFile>
+      <NoWarn>1701;1702;1587;1573;1572;1591</NoWarn>
+      <DefineConstants>TRACE;DEBUG;NETFRAMEWORK;NETSTANDARD2_0</DefineConstants>
+      <OutputPath>bin\Debug\netcoreapp2.0\</OutputPath>
+    </PropertyGroup>
 
     <ItemGroup>
         <EmbeddedResource Include="Localization\AbpZeroTemplate\*.xml;Emailing\EmailTemplates\default.html" Exclude="bin\**;obj\**;**\*.xproj;packages\**;@(EmbeddedResource)" />

@@ -126,7 +126,7 @@ namespace Roc.CMS.Web.Areas.Sys.Startup
                         requiredPermissionName: AppPermissions.Pages_Contents
                     ).AddItem(new MenuItemDefinition(SysPageNames.Content.Contents_Categorys,
                         L("Contents_Category"),
-                        url: "Sys/DemoUiComponents",
+                        url: "Sys/category",
                         icon: "flaticon-map",
                         requiredPermissionName: AppPermissions.Pages_Contents_Category)
                     ).AddItem(new MenuItemDefinition(SysPageNames.Content.Contents_Articles,

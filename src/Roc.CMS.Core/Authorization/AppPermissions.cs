@@ -72,6 +72,10 @@
         public const string Pages_Contents = "Pages.Contents";
 
         public const string Pages_Contents_Category = "Pages.Contents.Category";
+        public const string Pages_Contents_Category_Query = "Pages.Contents.Category.Query";
+        public const string Pages_Contents_Category_Create = "Pages.Contents.Category.Create";
+        public const string Pages_Contents_Category_Edit = "Pages.Contents.Category.Edit";
+        public const string Pages_Contents_Category_Delete = "Pages.Contents.Category.Delete";
 
         public const string Pages_Contents_Article = "Pages.Contents.Article";
 
