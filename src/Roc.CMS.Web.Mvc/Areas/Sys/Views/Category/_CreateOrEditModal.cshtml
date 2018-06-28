@@ -1,0 +1,71 @@
+﻿@using Abp.Application.Services.Dto
+@using Roc.CMS.Content
+@using Roc.CMS.Web.Areas.Sys.Models.Common.Modals
+@using Roc.CMS.Web.Areas.Sys.Startup
+@model CategoryCreateOrEditOutput
+@{
+
+}
+
+@Html.Partial("~/Areas/Sys/Views/Common/Modals/_ModalHeader.cshtml", new ModalHeaderViewModel(Model.IsEditMode ? (L(SysPageNames.Content.Categorys_EditInfo) + ": " + Model.Category.Name) : L(SysPageNames.Content.Categorys_CreateInfo)))
+
+<div class="modal-body">
+    <form name="CategoryForm" role="form" novalidate class="form-validation">
+        @if (Model.IsEditMode)
+        {
+            <input type="hidden" name="Id" value="@Model.Category.Id" />
+        }
+        <div class="form-group">
+            <label for="ParentId">@L(SysPageNames.Content.Categorys_ParentName)</label>
+            @Html.DropDownList("ParentId", Model.Categories.Select(i => i.ToSelectListItem()),
+                new
+                {
+                    @class = "form-control selectpicker",
+                    data_live_search = "true",
+                    id = "ParentId"
+                })
+        </div>
+        <div class="form-group">
+            <label for="Name">@L(SysPageNames.Content.Categorys_Name)</label>
+            <input id="Name" type="text" name="Name" class="form-control" value="@Model.Category.Name" required maxlength="200" />
+        </div>
+        <div class="form-group">
+            <label for="URL">@L(SysPageNames.Content.Categorys_URL)</label>
+            <input id="URL" type="text" name="URL" class="form-control" value="@Model.Category.URL" maxlength="200" />
+        </div>
+        <div class="form-group">
+            <label for="Target">@L(SysPageNames.Content.Categorys_Target)</label>
+            @Html.DropDownList("Target", Model.Targets.Select(i => i.ToSelectListItem()),
+                new
+                {
+                    @class = "form-control"
+                })
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label for="IsNav" class="m-checkbox">
+                        <input type="checkbox" id="IsNav" name="IsNav" value="false" @Html.Raw(Model.Category.IsNav ? "checked=\"checked\"" : "")/>
+                        @L(SysPageNames.Content.Categorys_IsNav)
+                        <span></span>
+                    </label>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label for="IsSpecial" class="m-checkbox">
+                        <input type="checkbox" id="IsSpecial" name="IsSpecial" value="false" @Html.Raw(Model.Category.IsSpecial ? "checked=\"checked\"" : "") />
+                        @L(SysPageNames.Content.Categorys_IsSpecial)
+                        <span></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="Remark">@L(SysPageNames.Content.Categorys_Remark)</label>
+            <textarea class="form-control" id="Remark" name="Remark" rows="5" maxlength="500">@Model.Category.Remark</textarea>
+        </div>
+    </form>
+</div>
+
+@Html.Partial("~/Areas/Sys/Views/Common/Modals/_ModalFooterWithSaveAndCancel.cshtml")

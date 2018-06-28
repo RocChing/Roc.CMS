@@ -36,9 +36,23 @@
         public static class Content
         {
             public const string Contents = "Content";
-            public const string Contents_Categorys = "Content.Categorys";
-            public const string Contents_Articles = "Content.Articles";
-            public const string Contents_Images = "Content.Images";
+            public const string Categorys = "Content.Categorys";
+            public const string Categorys_HeaderInfo = "Content.Categorys.HeaderInfo";
+            public const string Categorys_CreateInfo = "Content.Categorys.CreateBtn";
+            public const string Categorys_EditInfo = "Content.Categorys.EditInfo";
+            public const string Categorys_FilterByParentName = "Content.Categorys.FilterByParentName";
+
+            //列名
+            public const string Categorys_Name = "Content.Categorys.Name";
+            public const string Categorys_ParentName= "Content.Categorys.ParentName";
+            public const string Categorys_IsNav = "Content.Categorys.IsNav";
+            public const string Categorys_IsSpecial = "Content.Categorys.IsSpecial";
+            public const string Categorys_URL = "Content.Categorys.URL";
+            public const string Categorys_Target = "Content.Categorys.Target";
+            public const string Categorys_Remark = "Content.Categorys.Remark";
+
+            public const string Articles = "Content.Articles";
+            public const string Images = "Content.Images";
         }
     }
 }

@@ -11,6 +11,8 @@ using Roc.CMS.MultiTenancy.Accounting;
 using Roc.CMS.MultiTenancy.Payments;
 using Roc.CMS.Storage;
 using Roc.CMS.Content;
+using Roc.CMS.Logging;
+using Microsoft.Extensions.Logging;
 
 namespace Roc.CMS.EntityFrameworkCore
 {
@@ -38,6 +40,18 @@ namespace Roc.CMS.EntityFrameworkCore
             : base(options)
         {
 
+        }
+
+        /// <summary>
+        ///它是非常重要的应用程序不会创建每个上下文实例的新 ILoggerFactory 实例。 这样将导致内存泄漏和性能低下
+        /// </summary>
+        public static readonly ILoggerFactory EFLoggerFactory = new LoggerFactory(new[] { new EFLoggerProvider() });
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseLoggerFactory(EFLoggerFactory);
+
+            base.OnConfiguring(optionsBuilder);
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

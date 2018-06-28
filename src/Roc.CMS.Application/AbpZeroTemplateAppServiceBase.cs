@@ -8,6 +8,7 @@ using Abp.Threading;
 using Microsoft.AspNetCore.Identity;
 using Roc.CMS.Authorization.Users;
 using Roc.CMS.MultiTenancy;
+using Abp.Authorization;
 
 namespace Roc.CMS
 {
@@ -60,6 +61,14 @@ namespace Roc.CMS
         protected virtual void CheckErrors(IdentityResult identityResult)
         {
             identityResult.CheckErrors(LocalizationManager);
+        }
+
+        protected virtual void CheckPermission(string permissionName)
+        {
+            if (!string.IsNullOrEmpty(permissionName))
+            {
+                PermissionChecker.Authorize(permissionName);
+            }
         }
     }
 }

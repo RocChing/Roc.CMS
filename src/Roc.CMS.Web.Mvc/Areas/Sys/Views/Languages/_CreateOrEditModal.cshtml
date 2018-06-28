@@ -6,7 +6,7 @@
 @Html.Partial("~/Areas/Sys/Views/Common/Modals/_ModalHeader.cshtml", new ModalHeaderViewModel(Model.IsEditMode ? (L("EditLanguage") + ": " + Model.Language.Name) : L("CreateNewLanguage")))
 
 <div class="modal-body">
-    <form name="LanguageInformationsForm" role="form" novalidate class="form-validation">
+    <form name="CategoryForm" role="form" novalidate class="form-validation">
         @if (Model.IsEditMode)
         {
             <input type="hidden" name="Id" value="@Model.Language.Id" />

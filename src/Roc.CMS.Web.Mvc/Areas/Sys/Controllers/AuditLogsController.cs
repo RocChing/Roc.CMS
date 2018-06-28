@@ -10,7 +10,7 @@ using Roc.CMS.Web.Controllers;
 
 namespace Roc.CMS.Web.Areas.Sys.Controllers
 {
-    [Area("Sys")]
+    [Area(AppConsts.AppAreaName)]
     [DisableAuditing]
     [AbpMvcAuthorize(AppPermissions.Pages_Administration_AuditLogs)]
     public class AuditLogsController : AbpZeroTemplateControllerBase

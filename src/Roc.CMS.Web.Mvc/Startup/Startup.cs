@@ -114,7 +114,7 @@ namespace Roc.CMS.Web.Startup
             app.UseAbp(options =>
             {
                 options.UseAbpRequestLocalization = false; //used below: UseAbpRequestLocalization
-            });
+            });            
 
             if (env.IsDevelopment())
             {

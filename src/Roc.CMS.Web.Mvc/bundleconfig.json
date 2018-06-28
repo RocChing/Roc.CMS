@@ -11,6 +11,13 @@
     ]
   },
   {
+    "outputFileName": "wwwroot/view-resources/Areas/Sys/Views/_Bundles/category-list.js",
+    "inputFiles": [
+      "wwwroot/lib/inputmask/dist/jquery.inputmask.bundle.js",
+      "wwwroot/view-resources/Areas/Sys/Views/Category/Index.js"
+    ]
+  },
+  {
     "outputFileName": "wwwroot/view-resources/Areas/Sys/Views/_Bundles/common-scripts.js",
     "inputFiles": [
       "wwwroot/Common/Scripts/**/*.js",

@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using Abp.AspNetCore.Mvc.Authorization;
 using Abp.Runtime.Session;
 using Microsoft.AspNetCore.Mvc;
+using Roc.CMS;
 using Roc.CMS.Chat;
 using Roc.CMS.Storage;
 using Roc.CMS.Web.Controllers;
@@ -11,7 +12,7 @@ using Newtonsoft.Json.Linq;
 
 namespace Roc.CMS.Web.Areas.Sys.Controllers
 {
-    [Area("Sys")]
+    [Area(AppConsts.AppAreaName)]
     [AbpMvcAuthorize]
     public class ChatController : ChatControllerBase
     {

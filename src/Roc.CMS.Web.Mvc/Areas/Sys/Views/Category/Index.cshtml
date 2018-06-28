@@ -1,0 +1,51 @@
+﻿@using System.Threading.Tasks
+@using Roc.CMS.Authorization
+@using Roc.CMS.Web.Areas.Sys.Startup
+@{
+    string content_categorys = SysPageNames.Content.Categorys;
+    ViewBag.CurrentPageName = content_categorys;
+}
+
+@section Scripts{
+    <script abp-src="/view-resources/Areas/Sys/Views/_Bundles/category-list.js" asp-append-version="true"></script>
+}
+<div class="m-subheader ">
+    <div class="row align-items-center">
+        <div class="mr-auto col-sm-12 col-md-6">
+            <h3 class="m-subheader__title m-subheader__title--separator">
+                <span>@L(content_categorys)</span>
+            </h3>
+            <span class="m-section__sub">
+                @L(SysPageNames.Content.Categorys_HeaderInfo)
+            </span>
+        </div>
+        <div class="col-sm-12 col-md-6 text-right">
+            @if (IsGranted(AppPermissions.Pages_Contents_Category_Create))
+            {
+                <button id="CreateNewCategoryBtn" class="btn btn-primary"><i class="fa fa-plus"></i> @L(SysPageNames.Content.Categorys_CreateInfo)</button>
+            }
+        </div>
+    </div>
+</div>
+
+<div class="m-content">
+    <div class="m-portlet m-portlet--mobile">
+        <div class="m-portlet__body">
+            <div class="row align-items-center">
+                <table id="CategoryTable" class="display table table-striped table-bordered table-hover dt-responsive nowrap">
+                    <thead>
+                        <tr>
+                            <th>@L("Actions")</th>
+                            <th>@L(SysPageNames.Content.Categorys_Name)</th>
+                            <th>@L(SysPageNames.Content.Categorys_ParentName)</th>
+                            <th>@L(SysPageNames.Content.Categorys_URL)</th>
+                            <th>@L(SysPageNames.Content.Categorys_Target)</th>
+                            <th>@L(SysPageNames.Content.Categorys_IsNav)</th>
+                            <th>@L(SysPageNames.Content.Categorys_IsSpecial)</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

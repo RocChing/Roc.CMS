@@ -22,6 +22,8 @@
 
         public const int ResizedMaxProfilPictureBytesUserFriendlyValue = 1024;
 
-        public const int MaxProfilPictureBytesUserFriendlyValue = 5; 
+        public const int MaxProfilPictureBytesUserFriendlyValue = 5;
+
+        public const string AppAreaName = "Sys";
     }
 }
