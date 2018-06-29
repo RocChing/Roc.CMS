@@ -3,9 +3,6 @@
 @using Roc.CMS.Web.Areas.Sys.Models.Common.Modals
 @using Roc.CMS.Web.Areas.Sys.Startup
 @model CategoryCreateOrEditOutput
-@{
-    
-}
 
 @Html.Partial("~/Areas/Sys/Views/Common/Modals/_ModalHeader.cshtml", new ModalHeaderViewModel(Model.IsEditMode ? (L(SysPageNames.Content.Categorys_EditInfo) + ": " + Model.Category.Name) : L(SysPageNames.Content.Categorys_CreateInfo)))
 

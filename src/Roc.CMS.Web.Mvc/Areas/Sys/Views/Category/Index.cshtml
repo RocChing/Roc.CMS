@@ -1,6 +1,10 @@
 ﻿@using System.Threading.Tasks
 @using Roc.CMS.Authorization
+@using Abp.Application.Services.Dto
+@using Roc.CMS.Content
+@using Roc.CMS.Web.Areas.Sys.Models.Common.Modals
 @using Roc.CMS.Web.Areas.Sys.Startup
+@model CategoryCreateOrEditOutput
 @{
     string content_categorys = SysPageNames.Content.Categorys;
     ViewBag.CurrentPageName = content_categorys;
@@ -31,6 +35,35 @@
 <div class="m-content">
     <div class="m-portlet m-portlet--mobile">
         <div class="m-portlet__body">
+            <div class="m-form m-form--label-align-right">
+                <div>
+                    <div class="row m--margin-bottom-10">
+                        <div class="col-xl-6">
+                            <label for="txtFilter">@L(SysPageNames.Content.Categorys_FilterByName)</label>
+                            <div class="input-group">
+                                <input id="txtFilter" class="form-control m-input" type="text" value="" placeholder="@L("SearchWithThreeDot")" aria-describedby="basic-addon2">
+                                <span class="input-group-btn">
+                                    <button id="btnSearch" class="btn btn-primary" type="submit"><i class="flaticon-search-1" aria-label="@L("Search")"></i></button>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-xl-6">
+                            <label for="ParentId">@L(SysPageNames.Content.Categorys_ParentName)</label>
+                            @Html.DropDownList("ParentId", Model.Categories.Select(i => i.ToSelectListItem()),
+                           new
+                           {
+                               @class = "form-control selectpicker",
+                               data_live_search = "true"
+                           })
+                        </div>
+                    </div>
+                    <div class="row m--margin-bottom-10">
+                        <div class="col-xl-12 text-right">
+                            <button id="RefreshButton" class="btn btn-primary"><i class="fa fa-refresh"></i> @L("Refresh")</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="row align-items-center">
                 <table id="CategoryTable" class="display table table-striped table-bordered table-hover dt-responsive nowrap">
                     <thead>

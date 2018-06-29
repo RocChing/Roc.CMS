@@ -3090,14 +3090,40 @@
             _createOrEditModal.open();
         });
 
+        $('#ParentId').selectpicker({
+            iconBase: "fa",
+            tickIcon: "fa fa-check"
+        });
+
+        $('#btnSearch,#RefreshButton').click(function (e) {
+            e.preventDefault();
+            reload();
+        });
+
+        $('#txtFilter').on('keydown', function (e) {
+            if (e.keyCode !== 13) {
+                return;
+            }
+            e.preventDefault();
+            reload();
+        });
+
         abp.event.on('app.createOrEditCategoryModalSaved', function () {
             reload();
         });
 
         var dataTable = _categroyTable.DataTable({
-            paging: false,
+            paging: true,
+            serverSide: true,
+            processing: true,
             listAction: {
-                ajaxFunction: _categoryService.getCategories
+                ajaxFunction: _categoryService.getCategories,
+                inputFilter: function () {
+                    return {
+                        filter: $('#txtFilter').val(),
+                        parentId: $('#ParentId').val()
+                    };
+                }
             },
             columnDefs: [
                 {
@@ -3108,14 +3134,14 @@
                     defaultContent: '',
                     rowAction: {
                         text: '<i class="fa fa-cog"></i> ' + app.localize('Actions') + ' <span class="caret"></span>',
+                        enabled: function (data) {
+                            return data.record.parentId > 0;
+                        },
                         items: [
                             {
                                 text: app.localize('Edit'),
                                 visible: function () {
                                     return _permissions.edit;
-                                },
-                                enabled: function (data) {
-                                    return data.record.parentId > 0;
                                 },
                                 action: function (data) {
                                     _createOrEditModal.open({ id: data.record.id });
@@ -3124,9 +3150,6 @@
                                 text: app.localize('Delete'),
                                 visible: function () {
                                     return _permissions.delete;
-                                },
-                                enabled: function (data) {
-                                    return data.record.parentId > 0;
                                 },
                                 action: function (data) {
                                     deleteCategory(data.record);

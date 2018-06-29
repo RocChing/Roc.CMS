@@ -22,9 +22,13 @@ namespace Roc.CMS.Web.Areas.Sys.Controllers
             _categoryAppService = categoryAppService;
         }
 
-        public ActionResult Index()
+        public async Task<ActionResult> Index()
         {
-            return View();
+            ViewBag.FilterText = Request.Query["filterText"];
+            var output = await _categoryAppService.GetCategoryForEdit(new NullableIdDto());
+            output.Categories.Insert(0, new ComboboxItemDto("", ""));
+
+            return View(output);
         }
 
         public async Task<PartialViewResult> CreateOrEditModal(int? id)

@@ -114,6 +114,7 @@ namespace Roc.CMS.Content
             };
         }
 
+        [AbpAuthorize(AppPermissions.Pages_Contents_Category_Delete)]
         public async Task DeleteCategory(int id)
         {
             await _repository.DeleteAsync(id);

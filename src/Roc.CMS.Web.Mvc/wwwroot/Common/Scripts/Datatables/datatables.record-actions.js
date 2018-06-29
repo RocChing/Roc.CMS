@@ -47,6 +47,10 @@
             $dropdownButton.addClass(field.cssClass);
         }
 
+        if (field.enabled && !field.enabled({ record: record })) {
+            $dropdownButton.addClass('disabled');
+        }
+
         var $dropdownItemsContainer = $('<ul/>').addClass('dropdown-menu');
 
         for (var i = 0; i < field.items.length; i++) {

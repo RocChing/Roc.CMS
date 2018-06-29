@@ -41,6 +41,7 @@
             public const string Categorys_CreateInfo = "Content.Categorys.CreateBtn";
             public const string Categorys_EditInfo = "Content.Categorys.EditInfo";
             public const string Categorys_FilterByParentName = "Content.Categorys.FilterByParentName";
+            public const string Categorys_FilterByName = "Content.Categorys.FilterByName";
 
             //列名
             public const string Categorys_Name = "Content.Categorys.Name";
