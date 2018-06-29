@@ -1,7 +1,11 @@
 ﻿(function () {
 
     function preparePaypalButton() {
-        window.paypal.request.addHeaderBuilder(() => {
+        //window.paypal.request.addHeaderBuilder(() => {
+        //    return { 'X-XSRF-TOKEN': abp.security.antiForgery.getToken() };
+        //});
+
+        window.paypal.request.addHeaderBuilder(function () {
             return { 'X-XSRF-TOKEN': abp.security.antiForgery.getToken() };
         });
         

@@ -17,7 +17,12 @@ namespace Roc.CMS.Content
 
         public CategoryCreateOrEditOutput()
         {
-             
+
+        }
+
+        public string GetTrueOrFalseValue(bool flag)
+        {
+            return flag.ToString().ToLowerInvariant();
         }
     }
 }

@@ -3071,15 +3071,13 @@
             modalClass: 'CreateOrEditCategoryModal'
         });
 
-        function deleteEdition(edition) {
+        function deleteCategory(model) {
             abp.message.confirm(
-                app.localize('EditionDeleteWarningMessage', edition.displayName),
+                app.localize('Pages.Contents.Category.Delete.WarningMessage', model.name),
                 app.localize('AreYouSure'),
                 function (isConfirmed) {
                     if (isConfirmed) {
-                        _categoryService.deleteEdition({
-                            id: edition.id
-                        }).done(function () {
+                        _categoryService.deleteCategory(model.id).done(function () {
                             reload();
                             abp.notify.success(app.localize('SuccessfullyDeleted'));
                         });
@@ -3116,6 +3114,9 @@
                                 visible: function () {
                                     return _permissions.edit;
                                 },
+                                enabled: function (data) {
+                                    return data.record.parentId > 0;
+                                },
                                 action: function (data) {
                                     _createOrEditModal.open({ id: data.record.id });
                                 }
@@ -3124,8 +3125,11 @@
                                 visible: function () {
                                     return _permissions.delete;
                                 },
+                                enabled: function (data) {
+                                    return data.record.parentId > 0;
+                                },
                                 action: function (data) {
-                                    deleteEdition(data.record);
+                                    deleteCategory(data.record);
                                 }
                             }
                         ]
@@ -3145,18 +3149,46 @@
                 },
                 {
                     targets: 4,
-                    data: "target"
+                    data: "target",
+                    render: function (target) {
+                        var s = '';
+                        switch (target) {
+                            case 1:
+                                s = "_Blank(新开页面)";
+                                break;
+                            case 2:
+                                s = "Self(本页面)";
+                                break;
+                        }
+                        return s;
+                    }
                 },
                 {
                     targets: 5,
-                    data: "isNav"
+                    data: "isNav",
+                    render: function (isNav) {
+                        return getYesNoHtml(isNav);
+                    }
                 },
                 {
                     targets: 6,
-                    data: "isSpecial"
+                    data: "isSpecial",
+                    render: function (isSpecial) {
+                        return getYesNoHtml(isSpecial);
+                    }
                 }
             ]
         });
+
+        function getYesNoHtml(flag) {
+            var $span = $("<span/>").addClass("label");
+            if (flag) {
+                $span.addClass("m-badge m-badge--success m-badge--wide").text(app.localize('Yes'));
+            } else {
+                $span.addClass("m-badge m-badge--metal m-badge--wide").text(app.localize('No'));
+            }
+            return $span[0].outerHTML;
+        }
 
         function reload() {
             dataTable.ajax.reload();

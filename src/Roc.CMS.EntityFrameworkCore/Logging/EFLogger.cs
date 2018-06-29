@@ -4,8 +4,10 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Linq;
+using Microsoft.EntityFrameworkCore.Diagnostics;
 using IMyLogger = Castle.Core.Logging.ILogger;
 using IMyLoggerFactory = Castle.Core.Logging.ILoggerFactory;
+using System.Collections.Generic;
 
 namespace Roc.CMS.Logging
 {
@@ -25,6 +27,11 @@ namespace Roc.CMS.Logging
         {
             if (categoryName== DbLoggerCategory.Database.Command.Name && logLevel == LogLevel.Information)
             {
+                //var kv = state as KeyValuePair<string, object>;
+                //if (kv != null)
+                //{
+
+                //}
                 var logContent = formatter(state, exception);
                 _logger.Info(logContent, exception);
             }

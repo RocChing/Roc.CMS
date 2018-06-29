@@ -4,7 +4,7 @@
 @using Roc.CMS.Web.Areas.Sys.Startup
 @model CategoryCreateOrEditOutput
 @{
-
+    
 }
 
 @Html.Partial("~/Areas/Sys/Views/Common/Modals/_ModalHeader.cshtml", new ModalHeaderViewModel(Model.IsEditMode ? (L(SysPageNames.Content.Categorys_EditInfo) + ": " + Model.Category.Name) : L(SysPageNames.Content.Categorys_CreateInfo)))
@@ -45,7 +45,7 @@
             <div class="col-sm-6">
                 <div class="form-group">
                     <label for="IsNav" class="m-checkbox">
-                        <input type="checkbox" id="IsNav" name="IsNav" value="false" @Html.Raw(Model.Category.IsNav ? "checked=\"checked\"" : "")/>
+                        <input type="checkbox" id="IsNav" name="IsNav" value="@Model.GetTrueOrFalseValue(Model.Category.IsNav)" @Html.Raw(Model.Category.IsNav ? "checked=\"checked\"" : "") />
                         @L(SysPageNames.Content.Categorys_IsNav)
                         <span></span>
                     </label>
@@ -54,7 +54,7 @@
             <div class="col-sm-6">
                 <div class="form-group">
                     <label for="IsSpecial" class="m-checkbox">
-                        <input type="checkbox" id="IsSpecial" name="IsSpecial" value="false" @Html.Raw(Model.Category.IsSpecial ? "checked=\"checked\"" : "") />
+                        <input type="checkbox" id="IsSpecial" name="IsSpecial" value="@Model.GetTrueOrFalseValue(Model.Category.IsSpecial)" @Html.Raw(Model.Category.IsSpecial ? "checked=\"checked\"" : "") />
                         @L(SysPageNames.Content.Categorys_IsSpecial)
                         <span></span>
                     </label>

@@ -12,6 +12,26 @@
                 iconBase: "fa",
                 tickIcon: "fa fa-check"
             });
+
+            $modal.find('#IsNav').click(function () {
+                var chk = $(this);
+                if (chk.is(':checked')) {
+                    chk.val('true');
+                }
+                else {
+                    chk.val('false');
+                }
+            });
+
+            $modal.find('#IsSpecial').click(function () {
+                var chk = $(this);
+                if (chk.is(':checked')) {
+                    chk.val('true');
+                }
+                else {
+                    chk.val('false');
+                }
+            });
         }
 
         this.save = function () {

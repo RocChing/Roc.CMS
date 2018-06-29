@@ -13,6 +13,7 @@ using Roc.CMS.Storage;
 using Roc.CMS.Content;
 using Roc.CMS.Logging;
 using Microsoft.Extensions.Logging;
+using Microsoft.EntityFrameworkCore.Infrastructure;
 
 namespace Roc.CMS.EntityFrameworkCore
 {
@@ -39,7 +40,9 @@ namespace Roc.CMS.EntityFrameworkCore
         public AbpZeroTemplateDbContext(DbContextOptions<AbpZeroTemplateDbContext> options)
             : base(options)
         {
+            var coreOpt = options.FindExtension<CoreOptionsExtension>();
 
+            Logger.Debug("ROC###" + coreOpt.IsSensitiveDataLoggingEnabled.ToString());
         }
 
         /// <summary>

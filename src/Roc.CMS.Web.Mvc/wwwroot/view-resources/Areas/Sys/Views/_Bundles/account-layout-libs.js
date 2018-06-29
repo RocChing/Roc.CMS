@@ -34541,7 +34541,7 @@ $('#el').spin('flower', 'red')
 })));
 
 //! moment-timezone.js
-//! version : 0.5.20
+//! version : 0.5.21
 //! Copyright (c) JS Foundation and other contributors
 //! license : MIT
 //! github.com/moment/moment-timezone
@@ -34566,7 +34566,7 @@ $('#el').spin('flower', 'red')
 	// 	return moment;
 	// }
 
-	var VERSION = "0.5.20",
+	var VERSION = "0.5.21",
 		zones = {},
 		links = {},
 		names = {},
@@ -34939,10 +34939,7 @@ $('#el').spin('flower', 'red')
 	}
 
 	function getZone (name, caller) {
-		if (typeof name !== 'string') {
-			throw new Error('Time zone name must be a string, got ' + name + ' [' + typeof name + ']');
-		}
-
+		
 		name = normalizeName(name);
 
 		var zone = zones[name];
@@ -35101,6 +35098,9 @@ $('#el').spin('flower', 'red')
 
 	fn.tz = function (name, keepTime) {
 		if (name) {
+            if (typeof name !== 'string') {
+                throw new Error('Time zone name must be a string, got ' + name + ' [' + typeof name + ']');
+            }
 			this._z = getZone(name);
 			if (this._z) {
 				moment.updateOffset(this, keepTime);

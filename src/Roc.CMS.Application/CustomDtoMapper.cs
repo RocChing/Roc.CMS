@@ -33,6 +33,7 @@ using Roc.CMS.MultiTenancy.Payments.Dto;
 using Roc.CMS.Notifications.Dto;
 using Roc.CMS.Organizations.Dto;
 using Roc.CMS.Sessions.Dto;
+using Roc.CMS.Content;
 
 namespace Roc.CMS
 {
@@ -127,6 +128,8 @@ namespace Roc.CMS
             configuration.CreateMap<OrganizationUnit, OrganizationUnitDto>();
 
             /* ADD YOUR OWN CUSTOM AUTOMAPPER MAPPINGS HERE */
+
+            configuration.CreateMap<CategoryDto, Category>().ReverseMap();
         }
     }
 }

@@ -13,6 +13,7 @@ using Microsoft.EntityFrameworkCore;
 using System.Linq.Dynamic.Core;
 using Roc.CMS.Authorization;
 using Abp.Organizations;
+using Abp.UI;
 
 namespace Roc.CMS.Content
 {
@@ -62,11 +63,22 @@ namespace Roc.CMS.Content
         [AbpAuthorize(AppPermissions.Pages_Contents_Category_Create, AppPermissions.Pages_Contents_Category_Edit)]
         public async Task CreateOrUpdateCategory(CategoryDto input)
         {
-            var category = ObjectMapper.Map<Category>(input);
-            category.TenantId = AbpSession.TenantId;
-            if (category.IsTransient())
+            Category category;
+
+            if (!input.Id.HasValue)
             {
+                category = ObjectMapper.Map<Category>(input);
+                category.TenantId = AbpSession.TenantId;
                 category.Code = await GetNextChildCodeAsync(input.ParentId);
+            }
+            else
+            {
+                category = await _repository.GetAsync(input.Id.Value);
+                if (category == null)
+                {
+                    throw new UserFriendlyException(L("Content.Category.NotFound"));
+                }
+                ObjectMapper.Map(input, category);
             }
             await _repository.InsertOrUpdateAsync(category);
         }
@@ -87,16 +99,24 @@ namespace Roc.CMS.Content
             }
 
             var categories = from item in _repository.GetAll()
-                             orderby new { item.ParentId, item.Id }
-                             select new ComboboxItemDto(item.Id.ToString(), GetFormatName(item.Code, item.Name));
+                             orderby item.ParentId, item.Id
+                             select new ComboboxItemDto(item.Id.ToString(), GetFormatName(item.Code, item.Name))
+                             {
+                                 IsSelected = item.Id == category.ParentId
+                             };
 
             return new CategoryCreateOrEditOutput()
             {
                 IsEditMode = editMode,
                 Category = ObjectMapper.Map<CategoryDto>(category),
                 Categories = categories.ToList(),
-                Targets = GetCategroyTargets()
+                Targets = GetCategroyTargets(category.Target)
             };
+        }
+
+        public async Task DeleteCategory(int id)
+        {
+            await _repository.DeleteAsync(id);
         }
 
         #region 私有方法
@@ -123,14 +143,24 @@ namespace Roc.CMS.Content
             return (await _repository.GetAsync(id)).Code;
         }
 
-        private List<ComboboxItemDto> GetCategroyTargets()
+        private List<ComboboxItemDto> GetCategroyTargets(CategoryTarget target)
         {
             var blank = CategoryTarget.BLANK;
             var self = CategoryTarget.SELF;
 
             List<ComboboxItemDto> list = new List<ComboboxItemDto>();
-            list.Add(new ComboboxItemDto(((int)blank).ToString(), blank.ToString()+"(新开页面)"));
-            list.Add(new ComboboxItemDto(((int)self).ToString(), self.ToString()+"(本页面)"));
+            ComboboxItemDto blankItem = new ComboboxItemDto(((int)blank).ToString(), blank.ToString() + "(新开页面)");
+            ComboboxItemDto selfItem = new ComboboxItemDto(((int)self).ToString(), self.ToString() + "(本页面)");
+            if (target == blank)
+            {
+                blankItem.IsSelected = true;
+            }
+            else if (target == self)
+            {
+                selfItem.IsSelected = true;
+            }
+            list.Add(blankItem);
+            list.Add(selfItem);
             return list;
         }
 
