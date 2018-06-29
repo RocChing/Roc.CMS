@@ -66,7 +66,7 @@
                 inputFilter: function () {
                     return {
                         filter: $('#txtFilter').val(),
-                        parentId: $('#ParentId').val()
+                        parentCode: $('#ParentId').val()
                     };
                 }
             },

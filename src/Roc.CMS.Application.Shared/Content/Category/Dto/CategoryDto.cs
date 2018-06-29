@@ -7,6 +7,11 @@ namespace Roc.CMS.Content
 {
     public class CategoryDto
     {
+        public CategoryDto()
+        {
+            SortId = 100; 
+        }
+
         public virtual int? Id { get; set; }
 
         /// <summary>
@@ -52,5 +57,10 @@ namespace Roc.CMS.Content
         /// target类型
         /// </summary>
         public CategoryTarget Target { get; set; }
+
+        /// <summary>
+        /// 排序
+        /// </summary>
+        public int? SortId { get; set; }
     }
 }

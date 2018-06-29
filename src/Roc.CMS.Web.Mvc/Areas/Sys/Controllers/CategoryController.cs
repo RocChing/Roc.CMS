@@ -24,8 +24,7 @@ namespace Roc.CMS.Web.Areas.Sys.Controllers
 
         public async Task<ActionResult> Index()
         {
-            ViewBag.FilterText = Request.Query["filterText"];
-            var output = await _categoryAppService.GetCategoryForEdit(new NullableIdDto());
+            var output = await _categoryAppService.GetCategoryForEdit(new CategoryGetDto(null, true));
             output.Categories.Insert(0, new ComboboxItemDto("", ""));
 
             return View(output);
@@ -33,7 +32,7 @@ namespace Roc.CMS.Web.Areas.Sys.Controllers
 
         public async Task<PartialViewResult> CreateOrEditModal(int? id)
         {
-            var output = await _categoryAppService.GetCategoryForEdit(new NullableIdDto(id));
+            var output = await _categoryAppService.GetCategoryForEdit(new CategoryGetDto(id));
 
             return PartialView("_CreateOrEditModal", output);
         }

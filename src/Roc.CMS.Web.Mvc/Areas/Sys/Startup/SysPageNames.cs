@@ -51,6 +51,7 @@
             public const string Categorys_URL = "Content.Categorys.URL";
             public const string Categorys_Target = "Content.Categorys.Target";
             public const string Categorys_Remark = "Content.Categorys.Remark";
+            public const string Categorys_SortId = "Content.Categorys.SortId";
 
             public const string Articles = "Content.Articles";
             public const string Images = "Content.Images";

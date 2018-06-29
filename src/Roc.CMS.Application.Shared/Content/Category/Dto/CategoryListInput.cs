@@ -12,6 +12,8 @@ namespace Roc.CMS.Content
 
         public int? ParentId { get; set; }
 
+        public string ParentCode { get; set; }
+
         public void Normalize()
         {
             if (string.IsNullOrEmpty(Sorting))

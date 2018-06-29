@@ -25,7 +25,7 @@ namespace Roc.CMS.Content
         /// </summary>
         /// <param name="id">分类ID</param>
         /// <returns></returns>
-        Task<CategoryCreateOrEditOutput> GetCategoryForEdit(NullableIdDto id);
+        Task<CategoryCreateOrEditOutput> GetCategoryForEdit(CategoryGetDto id);
 
         /// <summary>
         /// 删除分类

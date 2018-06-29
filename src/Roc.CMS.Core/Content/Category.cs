@@ -59,5 +59,15 @@ namespace Roc.CMS.Content
         /// target类型
         /// </summary>
         public CategoryTarget Target { get; set; }
+
+        /// <summary>
+        /// 排序
+        /// </summary>
+        public int? SortId { get; set; }
+
+        public Category()
+        {
+            SortId = 100;
+        }
     }
 }

@@ -25,18 +25,16 @@ namespace Roc.CMS.Content
         {
             _repository = repository;
         }
-        //protected override string CreatePermissionName { get => AppPermissions.Pages_Contents_Category_Create; }
-        //protected override string UpdatePermissionName { get => AppPermissions.Pages_Contents_Category_Edit; }
-        //protected override string DeletePermissionName { get => AppPermissions.Pages_Contents_Category_Delete; }
 
         public async Task<PagedResultDto<CategoryListDto>> GetCategories(CategoryListInput input)
         {
             CheckPermission(AppPermissions.Pages_Contents_Category_Query);
 
             string filter = input.Filter;
+            string parentCode = input.ParentCode;
             var query = _repository.GetAll()
                 .WhereIf(!string.IsNullOrEmpty(filter), a => a.Name.Contains(filter) || a.Remark.Contains(filter) || a.Code.Contains(filter))
-                .WhereIf(input.ParentId.HasValue, a => a.ParentId == input.ParentId.Value);
+                .WhereIf(!string.IsNullOrEmpty(parentCode), a => a.Code.Contains(parentCode));
 
             var myQuery = from a in query
                           join b in _repository.GetAll() on a.ParentId equals b.Id
@@ -84,7 +82,7 @@ namespace Roc.CMS.Content
         }
 
         [AbpAuthorize(AppPermissions.Pages_Contents_Category_Create, AppPermissions.Pages_Contents_Category_Edit)]
-        public async Task<CategoryCreateOrEditOutput> GetCategoryForEdit(NullableIdDto dto)
+        public async Task<CategoryCreateOrEditOutput> GetCategoryForEdit(CategoryGetDto dto)
         {
             Category category;
             bool editMode = false;
@@ -100,7 +98,8 @@ namespace Roc.CMS.Content
 
             var categories = from item in _repository.GetAll()
                              orderby item.ParentId, item.Id
-                             select new ComboboxItemDto(item.Id.ToString(), GetFormatName(item.Code, item.Name))
+                             let value = dto.UseCodeValue ? item.Code : item.Id.ToString()
+                             select new ComboboxItemDto(value, GetFormatName(item.Code, item.Name))
                              {
                                  IsSelected = item.Id == category.ParentId
                              };

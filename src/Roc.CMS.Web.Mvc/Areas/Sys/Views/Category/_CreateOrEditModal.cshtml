@@ -59,6 +59,10 @@
             </div>
         </div>
         <div class="form-group">
+            <label for="SortId">@L(SysPageNames.Content.Categorys_SortId)</label>
+            <input id="SortId" type="number" name="SortId" class="form-control" value="@Model.Category.SortId" maxlength="20" />
+        </div>
+        <div class="form-group">
             <label for="Remark">@L(SysPageNames.Content.Categorys_Remark)</label>
             <textarea class="form-control" id="Remark" name="Remark" rows="5" maxlength="500">@Model.Category.Remark</textarea>
         </div>
