@@ -49,6 +49,7 @@ namespace Roc.CMS.Content
                               a.URL,
                               a.IsNav,
                               a.IsSpecial,
+                              a.SortId,
                               ParentName = c.Name
                           };
 
@@ -96,19 +97,19 @@ namespace Roc.CMS.Content
                 category = new Category();
             }
 
-            var categories = from item in _repository.GetAll()
-                             orderby item.ParentId, item.Id
-                             let value = dto.UseCodeValue ? item.Code : item.Id.ToString()
-                             select new ComboboxItemDto(value, GetFormatName(item.Code, item.Name))
-                             {
-                                 IsSelected = item.Id == category.ParentId
-                             };
+            CategoryLevelListInput input = new CategoryLevelListInput()
+            {
+                UseCodeValue = dto.UseCodeValue,
+                SelectedValue = dto.UseCodeValue ? category.Code : category.Id.ToString()
+            };
+
+            var categories = await GetLevelCategories(input);
 
             return new CategoryCreateOrEditOutput()
             {
                 IsEditMode = editMode,
                 Category = ObjectMapper.Map<CategoryDto>(category),
-                Categories = categories.ToList(),
+                Categories = categories,
                 Targets = GetCategroyTargets(category.Target)
             };
         }
@@ -117,6 +118,17 @@ namespace Roc.CMS.Content
         public async Task DeleteCategory(int id)
         {
             await _repository.DeleteAsync(id);
+        }
+
+        public async Task<List<ComboboxItemDto>> GetLevelCategories(CategoryLevelListInput input)
+        {
+            List<ComboboxItemDto> items = new List<ComboboxItemDto>();
+            var categories = await _repository.GetAllListAsync();
+            categories = categories.ToList();
+
+            AppendCategroy(0, 1, input, categories, items);
+
+            return items;
         }
 
         #region 私有方法
@@ -171,6 +183,26 @@ namespace Roc.CMS.Content
 
             return new string('-', level * 2) + name;
         }
+
+        private void AppendCategroy(int pid, int level, CategoryLevelListInput input, List<Category> categories, List<ComboboxItemDto> items)
+        {
+            var list = categories.Where(m => m.ParentId == pid).OrderBy(m => m.SortId);
+            string blank = "";
+            for (int i = 0; i < level; i++)
+            {
+                blank += input.Repeat;
+            }
+            blank += input.Pre;
+
+            foreach (var item in list)
+            {
+                string value = input.UseCodeValue ? item.Code : item.Id.ToString();
+                string text = blank + item.Name;
+                items.Add(new ComboboxItemDto(value, text) { IsSelected = value == input.SelectedValue });
+                AppendCategroy(item.Id, level + 1, input, categories, items);
+            }
+        }
+
         #endregion
     }
 }

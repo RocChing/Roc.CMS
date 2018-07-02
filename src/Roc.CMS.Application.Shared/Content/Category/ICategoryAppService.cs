@@ -1,6 +1,7 @@
 ﻿using Abp.Application.Services;
 using Abp.Application.Services.Dto;
 using System.Threading.Tasks;
+using System.Collections.Generic;
 
 namespace Roc.CMS.Content
 {
@@ -26,6 +27,13 @@ namespace Roc.CMS.Content
         /// <param name="id">分类ID</param>
         /// <returns></returns>
         Task<CategoryCreateOrEditOutput> GetCategoryForEdit(CategoryGetDto id);
+
+        /// <summary>
+        /// 查询分类层级列表
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        Task<List<ComboboxItemDto>> GetLevelCategories(CategoryLevelListInput input);
 
         /// <summary>
         /// 删除分类

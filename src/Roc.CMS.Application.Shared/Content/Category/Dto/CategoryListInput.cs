@@ -18,7 +18,7 @@ namespace Roc.CMS.Content
         {
             if (string.IsNullOrEmpty(Sorting))
             {
-                Sorting = "ParentId,Id";
+                Sorting = "ParentId,SortId";
             }
         }
     }

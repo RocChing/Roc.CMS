@@ -7,6 +7,9 @@ namespace Roc.CMS.Content
 {
     public class CategoryGetDto : NullableIdDto
     {
+        /// <summary>
+        /// 是否使用code
+        /// </summary>
         public bool UseCodeValue { get; set; }
 
         public CategoryGetDto()
