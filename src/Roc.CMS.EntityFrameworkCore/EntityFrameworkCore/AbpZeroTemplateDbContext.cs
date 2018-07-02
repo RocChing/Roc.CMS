@@ -40,9 +40,7 @@ namespace Roc.CMS.EntityFrameworkCore
         public AbpZeroTemplateDbContext(DbContextOptions<AbpZeroTemplateDbContext> options)
             : base(options)
         {
-            var coreOpt = options.FindExtension<CoreOptionsExtension>();
 
-            Logger.Debug("ROC###" + coreOpt.IsSensitiveDataLoggingEnabled.ToString());
         }
 
         /// <summary>
