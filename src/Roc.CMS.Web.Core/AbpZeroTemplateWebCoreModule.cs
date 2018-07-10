@@ -31,7 +31,7 @@ namespace Roc.CMS.Web
     [DependsOn(
         typeof(AbpZeroTemplateApplicationModule),
         typeof(AbpZeroTemplateEntityFrameworkCoreModule),
-        typeof(AbpAspNetZeroCoreWebModule),
+        typeof(MyAbpAspNetZeroCoreWebModule),
         typeof(AbpAspNetCoreSignalRModule),
         typeof(AbpRedisCacheModule), //AbpRedisCacheModule dependency (and Abp.RedisCache nuget package) can be removed if not using Redis cache
         typeof(AbpHangfireAspNetCoreModule) //AbpHangfireModule dependency (and Abp.Hangfire.AspNetCore nuget package) can be removed if not using Hangfire
@@ -132,6 +132,15 @@ namespace Roc.CMS.Web
                 DirectoryHelper.CreateIfNotExists(appFolders.TempFileDownloadFolder);
             }
             catch { }
+        }
+    }
+
+    [DependsOn(typeof(AbpAspNetCoreModule))]
+    public class MyAbpAspNetZeroCoreWebModule : AbpModule
+    {
+        public override void Initialize()
+        {
+            IocManager.RegisterAssemblyByConvention(typeof(AbpAspNetZeroCoreWebModule).Assembly);
         }
     }
 }

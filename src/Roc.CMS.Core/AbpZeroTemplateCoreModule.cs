@@ -34,7 +34,7 @@ namespace Roc.CMS
         typeof(AbpZeroCoreModule),
         typeof(AbpZeroLdapModule),
         typeof(AbpAutoMapperModule),
-        typeof(AbpAspNetZeroCoreModule),
+        typeof(MyAbpAspNetZeroCoreModule),
         typeof(AbpMailKitModule))]
     public class AbpZeroTemplateCoreModule : AbpModule
     {
@@ -64,7 +64,7 @@ namespace Roc.CMS
 
             //Enable this line to create a multi-tenant application.
             Configuration.MultiTenancy.IsEnabled = AbpZeroTemplateConsts.MultiTenancyEnabled;
-            
+
             //Enable LDAP authentication (It can be enabled only if MultiTenancy is disabled!)
             //Configuration.Modules.ZeroLdap().Enable(typeof(AppLdapAuthenticationSource));
 
@@ -108,6 +108,24 @@ namespace Roc.CMS
 
             IocManager.Resolve<ChatUserStateWatcher>().Initialize();
             IocManager.Resolve<AppTimes>().StartupTime = Clock.Now;
+        }
+    }
+
+    public class MyAbpAspNetZeroCoreModule : AbpModule
+    {
+        public override void PreInitialize()
+        {
+            IocManager.Register<AspNetZeroConfiguration>(DependencyLifeStyle.Singleton);
+        }
+
+        public override void Initialize()
+        {
+            IocManager.RegisterAssemblyByConvention(typeof(AbpAspNetZeroCoreModule).GetAssembly());
+        }
+
+        public override void PostInitialize()
+        {
+            //什么也不做,原来在这里检查 LicenseCode
         }
     }
 }

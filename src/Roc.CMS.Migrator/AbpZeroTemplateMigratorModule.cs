@@ -29,7 +29,7 @@ namespace Roc.CMS.Migrator
             Configuration.DefaultNameOrConnectionString = _appConfiguration.GetConnectionString(
                 AbpZeroTemplateConsts.ConnectionStringName
                 );
-            Configuration.Modules.AspNetZero().LicenseCode = _appConfiguration["AbpZeroLicenseCode"];
+            //Configuration.Modules.AspNetZero().LicenseCode = _appConfiguration["AbpZeroLicenseCode"];
 
             Configuration.BackgroundJobs.IsJobExecutionEnabled = false;
             Configuration.ReplaceService(typeof(IEventBus), () =>

@@ -60,7 +60,7 @@ namespace Roc.CMS.Tests
             Configuration.ReplaceService<IAppConfigurationAccessor, TestAppConfigurationAccessor>();
             Configuration.ReplaceService<IEmailSender, NullEmailSender>(DependencyLifeStyle.Transient);
 
-            Configuration.Modules.AspNetZero().LicenseCode = configuration["AbpZeroLicenseCode"];
+            //Configuration.Modules.AspNetZero().LicenseCode = configuration["AbpZeroLicenseCode"];
 
             //Uncomment below line to write change logs for the entities below:
             Configuration.EntityHistory.IsEnabled = true;
